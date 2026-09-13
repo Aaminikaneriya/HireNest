@@ -1,0 +1,1811 @@
+/* =========================================================
+   HIRENEST — FINAL ACTION
+   PREMIUM / RESPONSIVE / NO HORIZONTAL SCROLL
+========================================================= */
+
+/* =========================================================
+   GLOBAL SAFETY
+========================================================= */
+
+.final-action,
+.final-action *,
+.final-action *::before,
+.final-action *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+.final-action {
+    --fa-green: #159b72;
+    --fa-dark: #071d19;
+    --fa-mint: #effff9;
+
+    position: relative;
+
+    width: 100%;
+    max-width: 100%;
+
+    overflow: hidden;
+
+    padding:
+        96px 24px
+        58px;
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease;
+}
+
+
+/* =========================================================
+   LIGHT MODE
+========================================================= */
+
+.final-action-light {
+    background:
+        linear-gradient(
+            135deg,
+            #effff9 0%,
+            #ffffff 46%,
+            #f4fbf8 100%
+        );
+
+    color: #071d19;
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+.final-action-dark {
+    background:
+        radial-gradient(
+            circle at 15% 25%,
+            rgba(
+                21,
+                155,
+                114,
+                0.15
+            ),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 78%,
+            rgba(
+                21,
+                155,
+                114,
+                0.08
+            ),
+            transparent 30%
+        ),
+        #071d19;
+
+    color: #effff9;
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATION
+========================================================= */
+
+.final-glow {
+    position: absolute;
+
+    pointer-events: none;
+
+    border-radius: 50%;
+
+    max-width: 100%;
+}
+
+.final-glow-one {
+    width: 520px;
+    height: 520px;
+
+    left: -240px;
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(
+                21,
+                155,
+                114,
+                0.11
+            ),
+            transparent 68%
+        );
+}
+
+.final-glow-two {
+    width: 420px;
+    height: 420px;
+
+    right: -240px;
+    bottom: -250px;
+
+    border:
+        1px solid
+        rgba(
+            21,
+            155,
+            114,
+            0.11
+        );
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.final-action-container {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1160px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   TOP LINE
+========================================================= */
+
+.final-line {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-bottom: 58px;
+}
+
+.final-line span {
+    width: 64px;
+    max-width: 12vw;
+
+    height: 1px;
+
+    flex: 0 0 auto;
+
+    background:
+        currentColor;
+
+    opacity: 0.14;
+}
+
+.final-line small {
+    margin: 0;
+
+    font-size: 11px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: inherit;
+
+    opacity: 0.42;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.final-action-main {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(360px, 470px);
+
+    align-items: center;
+
+    gap: 72px;
+
+    margin-bottom: 46px;
+}
+
+
+/* =========================================================
+   LEFT COPY
+========================================================= */
+
+.final-copy {
+    min-width: 0;
+}
+
+.final-eyebrow {
+    display: block;
+
+    margin-bottom: 16px;
+
+    color: #159b72;
+
+    font-size: 11px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    letter-spacing: 2.3px;
+
+    text-transform: uppercase;
+}
+
+.final-copy h2 {
+    margin: 0;
+
+    font-size:
+        clamp(
+            52px,
+            6.5vw,
+            78px
+        );
+
+    line-height: 0.93;
+
+    letter-spacing: -4px;
+
+    font-weight: 800;
+}
+
+.final-copy h2 em {
+    color: #159b72;
+
+    font-style: normal;
+}
+
+.final-copy p {
+    max-width: 510px;
+
+    margin:
+        22px 0
+        23px;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: inherit;
+
+    opacity: 0.58;
+}
+
+
+/* =========================================================
+   TRUST
+========================================================= */
+
+.final-trust {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 16px;
+}
+
+.final-trust > div {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    min-height: 24px;
+}
+
+.final-trust svg {
+    flex: 0 0 auto;
+
+    color: #159b72;
+
+    font-size: 13px;
+}
+
+.final-trust span {
+    font-size: 11px;
+
+    line-height: 1.3;
+
+    color: inherit;
+
+    opacity: 0.5;
+}
+
+
+/* =========================================================
+   ACTION PANEL
+========================================================= */
+
+.final-action-panel {
+    width: 100%;
+    min-width: 0;
+
+    padding: 23px;
+
+    border:
+        1px solid;
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    transition:
+        background 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.final-action-light
+.final-action-panel {
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.76
+        );
+
+    border-color:
+        rgba(
+            21,
+            155,
+            114,
+            0.17
+        );
+
+    box-shadow:
+        0 24px 65px
+        rgba(
+            7,
+            29,
+            25,
+            0.06
+        );
+}
+
+.final-action-dark
+.final-action-panel {
+    background:
+        rgba(
+            239,
+            255,
+            249,
+            0.045
+        );
+
+    border-color:
+        rgba(
+            239,
+            255,
+            249,
+            0.10
+        );
+
+    box-shadow:
+        0 24px 70px
+        rgba(
+            0,
+            0,
+            0,
+            0.18
+        );
+}
+
+
+/* =========================================================
+   PANEL HEADER
+========================================================= */
+
+.action-panel-head {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding:
+        0 2px
+        15px;
+
+    margin-bottom: 5px;
+
+    border-bottom:
+        1px solid;
+
+    min-width: 0;
+}
+
+.final-action-light
+.action-panel-head {
+    border-color:
+        rgba(
+            7,
+            29,
+            25,
+            0.08
+        );
+}
+
+.final-action-dark
+.action-panel-head {
+    border-color:
+        rgba(
+            239,
+            255,
+            249,
+            0.09
+        );
+}
+
+.action-panel-head > div:first-child {
+    min-width: 0;
+}
+
+.action-panel-head span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #159b72;
+
+    font-size: 11px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+}
+
+.action-panel-head strong {
+    display: block;
+
+    font-size: 16px;
+
+    line-height: 1.3;
+
+    font-weight: 700;
+}
+
+.panel-arrow {
+    flex: 0 0 auto;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(
+            21,
+            155,
+            114,
+            0.28
+        );
+
+    border-radius: 50%;
+
+    color: #159b72;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   ACTION LIST
+========================================================= */
+
+.final-action-list {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+/* =========================================================
+   ACTION ITEM
+========================================================= */
+
+.final-action-item {
+    width: 100%;
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        28px
+        42px
+        minmax(0, 1fr)
+        34px;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-height: 78px;
+
+    padding:
+        9px 11px;
+
+    border:
+        1px solid
+        transparent;
+
+    border-radius: 13px;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    line-height: 1.3;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* LIGHT */
+
+.final-action-light
+.final-action-item {
+    background:
+        transparent;
+
+    color:
+        #071d19;
+}
+
+.final-action-light
+.final-action-item:hover {
+    background:
+        rgba(
+            21,
+            155,
+            114,
+            0.07
+        );
+
+    border-color:
+        rgba(
+            21,
+            155,
+            114,
+            0.15
+        );
+
+    transform:
+        translateX(3px);
+}
+
+
+/* DARK */
+
+.final-action-dark
+.final-action-item {
+    background:
+        transparent;
+
+    color:
+        #effff9;
+}
+
+.final-action-dark
+.final-action-item:hover {
+    background:
+        rgba(
+            21,
+            155,
+            114,
+            0.09
+        );
+
+    border-color:
+        rgba(
+            21,
+            155,
+            114,
+            0.18
+        );
+
+    transform:
+        translateX(3px);
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.action-number {
+    font-size: 11px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    opacity: 0.28;
+
+    text-align: center;
+}
+
+.final-action-dark
+.action-number {
+    color: #effff9;
+
+    opacity: 0.25;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.action-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        rgba(
+            21,
+            155,
+            114,
+            0.10
+        );
+
+    color:
+        #159b72;
+
+    font-size: 17px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.final-action-item:hover
+.action-icon {
+    background:
+        #159b72;
+
+    color:
+        #ffffff;
+
+    transform:
+        scale(1.05);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.action-content {
+    min-width: 0;
+}
+
+.action-content strong {
+    display: block;
+
+    margin: 0 0 5px;
+
+    font-size: 14px;
+
+    line-height: 1.3;
+
+    font-weight: 750;
+
+    color: inherit;
+}
+
+.action-content span {
+    display: block;
+
+    font-size: 11px;
+
+    line-height: 1.45;
+
+    color: inherit;
+
+    opacity: 0.48;
+}
+
+
+/* =========================================================
+   GO ARROW
+========================================================= */
+
+.action-go {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid;
+
+    border-radius: 50%;
+
+    color:
+        #159b72;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.final-action-light
+.action-go {
+    border-color:
+        rgba(
+            21,
+            155,
+            114,
+            0.18
+        );
+}
+
+.final-action-dark
+.action-go {
+    border-color:
+        rgba(
+            21,
+            155,
+            114,
+            0.30
+        );
+}
+
+.final-action-item:hover
+.action-go {
+    background:
+        #159b72;
+
+    border-color:
+        #159b72;
+
+    color:
+        #ffffff;
+
+    transform:
+        rotate(45deg);
+}
+
+.action-go svg {
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.final-status {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(180px, 1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 24px;
+
+    padding:
+        19px 20px;
+
+    border:
+        1px solid;
+
+    border-radius: 17px;
+
+    transition:
+        background 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* LIGHT STATUS */
+
+.final-action-light
+.final-status {
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.78
+        );
+
+    border-color:
+        rgba(
+            21,
+            155,
+            114,
+            0.16
+        );
+
+    box-shadow:
+        0 12px 35px
+        rgba(
+            7,
+            29,
+            25,
+            0.04
+        );
+}
+
+
+/* DARK STATUS */
+
+.final-action-dark
+.final-status {
+    background:
+        rgba(
+            21,
+            155,
+            114,
+            0.065
+        );
+
+    border-color:
+        rgba(
+            21,
+            155,
+            114,
+            0.19
+        );
+}
+
+
+/* =========================================================
+   STATUS LEFT
+========================================================= */
+
+.status-left {
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+.status-icon {
+    flex: 0 0 auto;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background:
+        #159b72;
+
+    color:
+        #ffffff;
+
+    font-size: 16px;
+}
+
+.status-left > div:last-child {
+    min-width: 0;
+}
+
+.status-left span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: 11px;
+
+    line-height: 1.2;
+
+    font-weight: 750;
+
+    letter-spacing: 1px;
+
+    color: inherit;
+
+    opacity: 0.44;
+}
+
+.status-left strong {
+    display: block;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    color: inherit;
+}
+
+
+/* =========================================================
+   STATUS PROGRESS
+========================================================= */
+
+.status-progress {
+    min-width: 0;
+}
+
+.status-progress-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 7px;
+}
+
+.status-progress-top span {
+    font-size: 11px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+
+    color: inherit;
+
+    opacity: 0.42;
+}
+
+.status-progress-top strong {
+    font-size: 12px;
+
+    line-height: 1.2;
+
+    color: #159b72;
+}
+
+.status-track {
+    width: 100%;
+
+    height: 7px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background:
+        rgba(
+            21,
+            155,
+            114,
+            0.11
+        );
+}
+
+.status-track span {
+    display: block;
+
+    width: 0;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            #159b72,
+            #35bc91
+        );
+
+    transition:
+        width 0.55s
+        cubic-bezier(
+            0.2,
+            0.8,
+            0.2,
+            1
+        );
+}
+
+
+/* =========================================================
+   STATUS ACTION
+========================================================= */
+
+.status-action {
+    min-width: 145px;
+
+    min-height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding:
+        8px 12px;
+
+    border:
+        1px solid
+        #159b72;
+
+    border-radius: 10px;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    background:
+        #159b72;
+
+    color:
+        #ffffff;
+
+    font-family:
+        inherit;
+
+    font-size: 11px;
+
+    line-height: 1.2;
+
+    font-weight: 750;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.status-action:hover {
+    background:
+        #071d19;
+
+    border-color:
+        #071d19;
+
+    transform:
+        translateY(-2px);
+}
+
+.final-action-light
+.status-action:hover {
+    background:
+        #071d19;
+
+    color:
+        #ffffff;
+}
+
+.status-action svg {
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.final-bottom {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 11px;
+
+    margin-top: 34px;
+}
+
+.final-bottom span {
+    font-size: 11px;
+
+    line-height: 1.2;
+
+    font-weight: 750;
+
+    letter-spacing: 1.4px;
+
+    color: inherit;
+
+    opacity: 0.30;
+}
+
+.final-bottom div {
+    width: 4px;
+    height: 4px;
+
+    flex: 0 0 auto;
+
+    border-radius: 50%;
+
+    background:
+        #159b72;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .final-action {
+        padding:
+            82px 20px
+            55px;
+    }
+
+    .final-action-main {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(330px, 420px);
+
+        gap: 45px;
+    }
+
+    .final-copy h2 {
+        font-size:
+            clamp(
+                48px,
+                6.2vw,
+                65px
+            );
+
+        letter-spacing:
+            -3px;
+    }
+
+    .final-copy p {
+        font-size:
+            13px;
+    }
+
+    .final-action-panel {
+        padding:
+            18px;
+    }
+
+    .action-content strong {
+        font-size:
+            13px;
+    }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 820px) {
+
+    .final-action-main {
+        grid-template-columns:
+            1fr;
+
+        gap:
+            38px;
+    }
+
+    .final-copy {
+        max-width:
+            700px;
+    }
+
+    .final-copy h2 {
+        font-size:
+            clamp(
+                47px,
+                8vw,
+                66px
+            );
+    }
+
+    .final-action-panel {
+        width:
+            min(
+                100%,
+                560px
+            );
+
+        margin:
+            0 auto;
+    }
+
+    .final-status {
+        grid-template-columns:
+            1fr
+            1fr;
+    }
+
+    .status-action {
+        width:
+            100%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .final-action {
+        padding:
+            70px 16px
+            48px;
+    }
+
+
+    /* BACKGROUND */
+
+    .final-glow-one {
+        width:
+            300px;
+
+        height:
+            300px;
+
+        left:
+            -150px;
+    }
+
+    .final-glow-two {
+        width:
+            260px;
+
+        height:
+            260px;
+
+        right:
+            -150px;
+
+        bottom:
+            -150px;
+    }
+
+
+    /* LINE */
+
+    .final-line {
+        gap:
+            10px;
+
+        margin-bottom:
+            35px;
+    }
+
+    .final-line span {
+        width:
+            32px;
+
+        max-width:
+            32px;
+    }
+
+    .final-line small {
+        font-size:
+            11px;
+
+        letter-spacing:
+            1.2px;
+    }
+
+
+    /* MAIN */
+
+    .final-action-main {
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        gap:
+            31px;
+
+        margin-bottom:
+            27px;
+    }
+
+
+    /* COPY */
+
+    .final-eyebrow {
+        margin-bottom:
+            13px;
+
+        font-size:
+            11px;
+
+        letter-spacing:
+            1.8px;
+    }
+
+    .final-copy h2 {
+        font-size:
+            41px;
+
+        line-height:
+            0.95;
+
+        letter-spacing:
+            -2px;
+    }
+
+    .final-copy p {
+        max-width:
+            100%;
+
+        margin:
+            16px 0
+            18px;
+
+        font-size:
+            12px;
+
+        line-height:
+            1.7;
+    }
+
+    .final-trust {
+        gap:
+            9px 13px;
+    }
+
+    .final-trust > div {
+        min-height:
+            22px;
+
+        gap:
+            5px;
+    }
+
+    .final-trust svg {
+        font-size:
+            12px;
+    }
+
+    .final-trust span {
+        font-size:
+            11px;
+
+        line-height:
+            1.3;
+    }
+
+
+    /* PANEL */
+
+    .final-action-panel {
+        width:
+            100%;
+
+        padding:
+            14px;
+
+        border-radius:
+            18px;
+    }
+
+    .action-panel-head {
+        padding:
+            0 1px
+            12px;
+
+        margin-bottom:
+            4px;
+    }
+
+    .action-panel-head span {
+        font-size:
+            11px;
+
+        letter-spacing:
+            1.1px;
+    }
+
+    .action-panel-head strong {
+        font-size:
+            14px;
+    }
+
+    .panel-arrow {
+        width:
+            34px;
+
+        height:
+            34px;
+
+        font-size:
+            14px;
+    }
+
+
+    /* ACTION */
+
+    .final-action-list {
+        gap:
+            6px;
+    }
+
+    .final-action-item {
+        grid-template-columns:
+            25px
+            39px
+            minmax(0, 1fr)
+            31px;
+
+        gap:
+            8px;
+
+        min-height:
+            74px;
+
+        padding:
+            8px;
+
+        border-radius:
+            11px;
+    }
+
+    .action-number {
+        font-size:
+            11px;
+    }
+
+    .action-icon {
+        width:
+            39px;
+
+        height:
+            39px;
+
+        border-radius:
+            11px;
+
+        font-size:
+            15px;
+    }
+
+    .action-content strong {
+        margin-bottom:
+            4px;
+
+        font-size:
+            12px;
+
+        line-height:
+            1.25;
+    }
+
+    .action-content span {
+        font-size:
+            11px;
+
+        line-height:
+            1.4;
+    }
+
+    .action-go {
+        width:
+            31px;
+
+        height:
+            31px;
+    }
+
+    .action-go svg {
+        font-size:
+            14px;
+    }
+
+
+    /* STATUS */
+
+    .final-status {
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        gap:
+            13px;
+
+        padding:
+            14px;
+
+        border-radius:
+            14px;
+    }
+
+    .status-left {
+        gap:
+            9px;
+    }
+
+    .status-icon {
+        width:
+            38px;
+
+        height:
+            38px;
+
+        border-radius:
+            10px;
+
+        font-size:
+            15px;
+    }
+
+    .status-left span {
+        font-size:
+            11px;
+    }
+
+    .status-left strong {
+        font-size:
+            11px;
+
+        line-height:
+            1.4;
+    }
+
+    .status-progress-top {
+        margin-bottom:
+            6px;
+    }
+
+    .status-progress-top span {
+        font-size:
+            11px;
+    }
+
+    .status-progress-top strong {
+        font-size:
+            12px;
+    }
+
+    .status-track {
+        height:
+            7px;
+    }
+
+    .status-action {
+        width:
+            100%;
+
+        min-height:
+            39px;
+
+        font-size:
+            11px;
+    }
+
+
+    /* BOTTOM */
+
+    .final-bottom {
+        gap:
+            8px;
+
+        margin-top:
+            26px;
+    }
+
+    .final-bottom span {
+        font-size:
+            11px;
+
+        letter-spacing:
+            1px;
+    }
+
+    .final-bottom div {
+        width:
+            4px;
+
+        height:
+            4px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .final-action {
+        padding:
+            60px 13px
+            42px;
+    }
+
+    .final-copy h2 {
+        font-size:
+            36px;
+
+        letter-spacing:
+            -1.7px;
+    }
+
+    .final-copy p {
+        font-size:
+            11px;
+    }
+
+    .final-trust {
+        gap:
+            8px 11px;
+    }
+
+    .final-trust span {
+        font-size:
+            11px;
+    }
+
+    .final-action-panel {
+        padding:
+            12px;
+
+        border-radius:
+            17px;
+    }
+
+    .action-panel-head strong {
+        font-size:
+            13px;
+    }
+
+    .final-action-item {
+        grid-template-columns:
+            22px
+            36px
+            minmax(0, 1fr)
+            29px;
+
+        gap:
+            7px;
+
+        min-height:
+            72px;
+
+        padding:
+            7px;
+    }
+
+    .action-icon {
+        width:
+            36px;
+
+        height:
+            36px;
+
+        font-size:
+            14px;
+    }
+
+    .action-content strong {
+        font-size:
+            11px;
+    }
+
+    .action-content span {
+        font-size:
+            11px;
+    }
+
+    .action-go {
+        width:
+            29px;
+
+        height:
+            29px;
+    }
+
+    .status-left strong {
+        font-size:
+            11px;
+    }
+
+    .final-bottom span {
+        font-size:
+            11px;
+
+        letter-spacing:
+            0.8px;
+    }
+}

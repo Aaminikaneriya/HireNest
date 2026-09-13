@@ -1,0 +1,1069 @@
+/* =========================================
+   CAREER FLOW
+========================================= */
+
+.career-flow {
+    --green: #159b72;
+    --dark-green: #071d19;
+    --mint: #effff9;
+
+    width: 100%;
+    padding: 90px 20px;
+
+    background:
+        radial-gradient(
+            circle at 8% 15%,
+            rgba(21, 155, 114, 0.08),
+            transparent 28%
+        ),
+        #ffffff;
+
+    color: #071d19;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.career-flow-dark {
+    background:
+        radial-gradient(
+            circle at 8% 15%,
+            rgba(21, 155, 114, 0.12),
+            transparent 28%
+        ),
+        #071d19;
+
+    color: #effff9;
+}
+
+.career-flow-container {
+    width: 100%;
+    max-width: 1180px;
+    margin: auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.career-flow-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 50px;
+    margin-bottom: 65px;
+}
+
+.career-flow-label {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: #159b72;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+}
+
+.career-flow-header h2 {
+    margin: 0;
+
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 0.98;
+
+    letter-spacing: -2.5px;
+
+    font-weight: 800;
+}
+
+.career-flow-header h2 span {
+    color: #159b72;
+}
+
+.career-flow-header > p {
+    max-width: 390px;
+
+    margin: 0 0 4px;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    opacity: 0.58;
+}
+
+
+/* =========================================
+   FLOW
+========================================= */
+
+.career-flow-line {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 100px;
+    row-gap: 25px;
+}
+
+.career-flow-line::before {
+    content: "";
+
+    position: absolute;
+
+    top: 15px;
+    bottom: 15px;
+
+    left: 50%;
+
+    width: 1px;
+
+    transform: translateX(-50%);
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            #159b72 0,
+            #159b72 7px,
+            transparent 7px,
+            transparent 15px
+        );
+
+    opacity: 0.3;
+}
+
+
+/* =========================================
+   OPTION
+========================================= */
+
+.career-flow-item {
+    position: relative;
+
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 17px;
+
+    padding: 15px 14px 15px 10px;
+
+    border: 0;
+    border-radius: 18px;
+
+    background: transparent;
+
+    color: inherit;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.career-flow-item:hover {
+    transform: translateY(-4px);
+
+    background: rgba(21, 155, 114, 0.055);
+
+    box-shadow:
+        0 15px 35px rgba(7, 29, 25, 0.05);
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.flow-number {
+    position: absolute;
+
+    top: 2px;
+    left: 10px;
+
+    color: #159b72;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.flow-icon {
+    flex-shrink: 0;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #effff9;
+
+    color: #159b72;
+
+    border: 1px solid
+        rgba(21, 155, 114, 0.16);
+
+    font-size: 21px;
+
+    transition: 0.3s ease;
+}
+
+.career-flow-dark .flow-icon {
+    background: rgba(21, 155, 114, 0.12);
+}
+
+.career-flow-item:hover .flow-icon {
+    background: #159b72;
+
+    color: #ffffff;
+
+    transform: scale(1.06) rotate(-6deg);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.flow-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.flow-content h3 {
+    margin: 0 0 5px;
+
+    font-size: 15px;
+
+    font-weight: 750;
+
+    letter-spacing: -0.3px;
+}
+
+.flow-content p {
+    margin: 0;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    opacity: 0.52;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.flow-arrow {
+    flex-shrink: 0;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(21, 155, 114, 0.18);
+
+    color: #159b72;
+
+    transition: 0.3s ease;
+}
+
+.career-flow-item:hover .flow-arrow {
+    background: #159b72;
+
+    color: white;
+
+    transform: rotate(45deg);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.career-flow-footer {
+    margin-top: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 13px;
+
+    opacity: 0.4;
+}
+
+.career-flow-footer span {
+    width: 55px;
+    height: 1px;
+
+    background: currentColor;
+}
+
+.career-flow-footer p {
+    margin: 0;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   MODAL OVERLAY
+===================================================== */
+
+/*
+   IMPORTANT:
+   Aa navbar ni niche nahi jay.
+   Navbar karta HIGH z-index.
+*/
+
+.career-modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    z-index: 999999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(7, 29, 25, 0.48);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    animation: overlayShow 0.22s ease;
+}
+
+@keyframes overlayShow {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =====================================================
+   MINI MODAL
+===================================================== */
+
+.career-modal {
+    position: relative;
+
+    width: min(510px, 100%);
+
+    /*
+       MINI CARD
+       Desktop maximum around 380px
+    */
+    max-height: 390px;
+
+    overflow: hidden;
+
+    padding: 25px 27px 22px;
+
+    border-radius: 22px;
+
+    background: #ffffff;
+
+    color: #071d19;
+
+    border: 1px solid
+        rgba(21, 155, 114, 0.15);
+
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.28),
+        0 10px 30px rgba(7, 29, 25, 0.15);
+
+    animation: modalShow 0.28s
+        cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes modalShow {
+    from {
+        opacity: 0;
+        transform:
+            translateY(15px)
+            scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================
+   CLOSE
+========================================= */
+
+.career-modal-close {
+    position: absolute;
+
+    top: 14px;
+    right: 14px;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid
+        rgba(7, 29, 25, 0.09);
+
+    border-radius: 50%;
+
+    background: #f4f8f6;
+
+    color: #071d19;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+
+    z-index: 5;
+}
+
+.career-modal-close svg {
+    font-size: 15px;
+}
+
+.career-modal-close:hover {
+    background: #159b72;
+
+    color: white;
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================
+   MODAL TOP
+========================================= */
+
+.career-modal-top {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 14px;
+}
+
+.career-modal-icon {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #effff9;
+
+    color: #159b72;
+
+    font-size: 18px;
+}
+
+.modal-step {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #159b72;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.modal-mini-text {
+    display: block;
+
+    font-size: 9px;
+
+    opacity: 0.4;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.career-modal h2 {
+    margin: 0 40px 8px 0;
+
+    font-size: 24px;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.8px;
+}
+
+.career-modal-description {
+    margin: 0 0 15px;
+
+    max-width: 440px;
+
+    font-size: 11px;
+
+    line-height: 1.55;
+
+    opacity: 0.6;
+}
+
+
+/* =========================================
+   PROCESS
+========================================= */
+
+.career-process {
+    padding: 12px 14px;
+
+    margin-bottom: 13px;
+
+    border-radius: 14px;
+
+    background: #f5faf8;
+}
+
+.process-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 7px;
+
+    margin-bottom: 3px;
+
+    border-bottom: 1px solid
+        rgba(7, 29, 25, 0.07);
+}
+
+.process-heading span {
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+}
+
+.process-heading small {
+    font-size: 8px;
+
+    opacity: 0.4;
+}
+
+
+/* =========================================
+   PROCESS STEP
+========================================= */
+
+.process-step {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    min-height: 31px;
+}
+
+.process-check {
+    flex-shrink: 0;
+
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(
+        21,
+        155,
+        114,
+        0.11
+    );
+
+    color: #159b72;
+
+    font-size: 11px;
+}
+
+.process-text {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    min-width: 0;
+}
+
+.process-text small {
+    flex-shrink: 0;
+
+    color: #159b72;
+
+    font-size: 7px;
+
+    font-weight: 800;
+}
+
+.process-text p {
+    margin: 0;
+
+    font-size: 10px;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.career-modal-btn {
+    width: 100%;
+
+    min-height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border: 0;
+
+    border-radius: 11px;
+
+    background: #159b72;
+
+    color: white;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.career-modal-btn:hover {
+    background: #071d19;
+
+    transform: translateY(-2px);
+}
+
+.career-modal-btn svg {
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+.career-modal-btn:hover svg {
+    transform:
+        translate(2px, -2px);
+}
+
+
+/* =====================================================
+   DARK MODE MODAL
+===================================================== */
+
+.career-modal-dark {
+    background: #0a2520;
+
+    color: #effff9;
+
+    border-color:
+        rgba(21, 155, 114, 0.25);
+
+    box-shadow:
+        0 35px 100px
+            rgba(0, 0, 0, 0.55),
+        0 0 0 1px
+            rgba(21, 155, 114, 0.06);
+}
+
+.career-modal-dark
+.career-modal-close {
+    background:
+        rgba(239, 255, 249, 0.07);
+
+    color: #effff9;
+
+    border-color:
+        rgba(239, 255, 249, 0.1);
+}
+
+.career-modal-dark
+.career-modal-close:hover {
+    background: #159b72;
+
+    color: white;
+}
+
+.career-modal-dark
+.career-modal-icon {
+    background:
+        rgba(21, 155, 114, 0.13);
+
+    color: #159b72;
+}
+
+.career-modal-dark
+.career-process {
+    background:
+        rgba(239, 255, 249, 0.045);
+}
+
+.career-modal-dark
+.process-heading {
+    border-color:
+        rgba(239, 255, 249, 0.08);
+}
+
+.career-modal-dark
+.process-step p {
+    color: #effff9;
+}
+
+.career-modal-dark
+.process-check {
+    background:
+        rgba(21, 155, 114, 0.15);
+}
+@media (max-width: 1100px) 
+{
+     .career-flow-label{
+        margin-top: 40px;
+    }
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .career-flow {
+        padding: 75px 20px;
+    }
+
+    .career-flow-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 22px;
+
+        margin-bottom: 50px;
+    }
+
+    .career-flow-header > p {
+        max-width: 560px;
+    }
+    .career-flow-label{
+        margin-top: 40px;
+    }
+
+    .career-flow-line {
+        column-gap: 45px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .career-flow {
+        padding: 65px 16px;
+    }
+
+    .career-flow-header {
+        margin-bottom: 42px;
+    }
+
+    .career-flow-header h2 {
+        font-size: 38px;
+
+        letter-spacing: -1.7px;
+    }
+
+    .career-flow-header > p {
+        font-size: 12px;
+
+        line-height: 1.7;
+    }
+
+    /* Vertical flow */
+
+    .career-flow-line {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 9px;
+    }
+
+    .career-flow-line::before {
+        left: 29px;
+
+        transform: none;
+    }
+
+    .career-flow-item,
+    .career-flow-item:nth-child(odd),
+    .career-flow-item:nth-child(even) {
+
+        width: 100%;
+
+        margin: 0;
+
+        min-height: 82px;
+
+        padding: 13px 4px;
+    }
+
+    .flow-number {
+        top: 2px;
+
+        left: 73px;
+    }
+
+    .flow-icon {
+        width: 55px;
+        height: 55px;
+
+        font-size: 19px;
+    }
+
+    .flow-content h3 {
+        font-size: 13px;
+    }
+
+    .flow-content p {
+        font-size: 10px;
+    }
+
+    .flow-arrow {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    /* =================================
+       MOBILE MINI MODAL
+    ================================= */
+
+    .career-modal-overlay {
+        padding: 14px;
+    }
+
+    .career-modal {
+
+        width: 100%;
+
+        /*
+          Mobile ma pan mini
+        */
+        max-width: 390px;
+
+        max-height: 380px;
+
+        padding: 20px 18px 17px;
+
+        border-radius: 20px;
+    }
+
+    .career-modal-close {
+        top: 11px;
+        right: 11px;
+
+        width: 30px;
+        height: 30px;
+    }
+
+    .career-modal-top {
+        gap: 9px;
+
+        margin-bottom: 11px;
+    }
+
+    .career-modal-icon {
+        width: 39px;
+        height: 39px;
+
+        border-radius: 11px;
+
+        font-size: 16px;
+    }
+
+    .modal-step {
+        font-size: 8px;
+    }
+
+    .modal-mini-text {
+        font-size: 8px;
+    }
+
+    .career-modal h2 {
+        font-size: 21px;
+
+        margin-bottom: 7px;
+    }
+
+    .career-modal-description {
+        font-size: 10px;
+
+        line-height: 1.5;
+
+        margin-bottom: 11px;
+    }
+
+    .career-process {
+        padding: 10px 11px;
+
+        margin-bottom: 10px;
+
+        border-radius: 12px;
+    }
+
+    .process-heading {
+        padding-bottom: 6px;
+    }
+
+    .process-step {
+        min-height: 29px;
+
+        gap: 7px;
+    }
+
+    .process-check {
+        width: 20px;
+        height: 20px;
+
+        font-size: 9px;
+    }
+
+    .process-text {
+        gap: 6px;
+    }
+
+    .process-text small {
+        font-size: 6px;
+    }
+
+    .process-text p {
+        font-size: 9px;
+    }
+
+    .career-modal-btn {
+        min-height: 35px;
+
+        border-radius: 10px;
+
+        font-size: 10px;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .career-flow-header h2 {
+        font-size: 33px;
+    }
+
+    .career-flow-item {
+        min-height: 76px;
+    }
+
+    .flow-icon {
+        width: 51px;
+        height: 51px;
+    }
+
+    .career-modal {
+        max-height: 365px;
+
+        padding:
+            18px 15px 15px;
+    }
+
+    .career-modal h2 {
+        font-size: 19px;
+    }
+
+    .career-modal-description {
+        font-size: 9px;
+    }
+
+    .career-process {
+        padding: 8px 9px;
+    }
+
+    .process-text p {
+        font-size: 8.5px;
+    }
+}

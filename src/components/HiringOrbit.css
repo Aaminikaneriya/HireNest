@@ -1,0 +1,1511 @@
+/* =========================================================
+   HIRENEST — HIRING ORBIT
+========================================================= */
+
+.hiring-orbit {
+    --ho-green: #159b72;
+    --ho-dark: #071d19;
+    --ho-mint: #effff9;
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 105px 20px 90px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 50% 55%,
+            rgba(21, 155, 114, 0.08),
+            transparent 32%),
+        #ffffff;
+
+    color: var(--ho-dark);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.hiring-orbit-dark {
+    background:
+        radial-gradient(circle at 50% 55%,
+            rgba(21, 155, 114, 0.13),
+            transparent 35%),
+        #071d19;
+
+    color: var(--ho-mint);
+}
+
+.hiring-orbit-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.hiring-orbit-header {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    margin-bottom: 65px;
+}
+
+.orbit-eyebrow {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: var(--ho-green);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+}
+
+.hiring-orbit-header h2 {
+    margin: 0;
+
+    font-size: clamp(38px,
+            5vw,
+            62px);
+
+    line-height: 0.98;
+
+    letter-spacing: -2.8px;
+
+    font-weight: 800;
+}
+
+.hiring-orbit-header h2 span {
+    color: var(--ho-green);
+}
+
+.orbit-header-right {
+    max-width: 360px;
+}
+
+.orbit-header-right p {
+    margin: 0 0 18px;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+
+    opacity: 0.58;
+}
+
+.orbit-all-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--ho-green);
+
+    font-size: 11px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+}
+
+.orbit-all-btn svg {
+    transition: 0.25s ease;
+}
+
+.orbit-all-btn:hover svg {
+    transform:
+        translate(3px, -3px);
+}
+
+
+/* =========================================================
+   ORBIT STAGE
+========================================================= */
+
+.orbit-stage {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 900px;
+
+    height: 520px;
+
+    margin: 0 auto;
+
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   RINGS
+========================================================= */
+
+.orbit-ring {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(21, 155, 114, 0.16);
+
+    transform:
+        translate(-50%, -50%);
+
+    pointer-events: none;
+}
+
+.ring-one {
+    width: 230px;
+    height: 230px;
+}
+
+.ring-two {
+    width: 390px;
+    height: 390px;
+
+    border-style: dashed;
+
+    opacity: 0.8;
+}
+
+.ring-three {
+    width: 550px;
+    height: 550px;
+
+    opacity: 0.55;
+}
+
+
+/* =========================================================
+   CENTER
+========================================================= */
+
+.orbit-center {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 120px;
+    height: 120px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(145deg,
+            #ffffff,
+            #effff9);
+
+    border: 1px solid rgba(21, 155, 114, 0.25);
+
+    box-shadow:
+        0 20px 55px rgba(7, 29, 25, 0.12),
+        0 0 45px rgba(21, 155, 114, 0.1);
+
+    z-index: 10;
+}
+
+.hiring-orbit-dark .orbit-center {
+    background:
+        linear-gradient(145deg,
+            #0b2822,
+            #071d19);
+
+    border-color:
+        rgba(21, 155, 114, 0.3);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35),
+        0 0 45px rgba(21, 155, 114, 0.12);
+}
+
+.center-logo {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: var(--ho-green);
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 900;
+}
+
+.orbit-center span {
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.3px;
+}
+
+.orbit-center small {
+    font-size: 6px;
+
+    letter-spacing: 1.3px;
+
+    opacity: 0.45;
+}
+
+.center-pulse {
+    position: absolute;
+
+    inset: -9px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(21, 155, 114, 0.25);
+
+    animation:
+        centerPulse 2.5s infinite ease-out;
+
+    pointer-events: none;
+}
+
+@keyframes centerPulse {
+    0% {
+        opacity: 0.7;
+
+        transform: scale(0.92);
+    }
+
+    70% {
+        opacity: 0;
+
+        transform: scale(1.12);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform: scale(1.12);
+    }
+}
+
+
+/* =========================================================
+   CONNECTING LINES
+========================================================= */
+
+.orbit-line {
+    position: absolute;
+
+    height: 1px;
+
+    transform-origin: left center;
+
+    background:
+        linear-gradient(90deg,
+            rgba(21, 155, 114, 0.05),
+            rgba(21, 155, 114, 0.38),
+            rgba(21, 155, 114, 0.05));
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+.line-one {
+    width: 260px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        rotate(-27deg);
+}
+
+.line-two {
+    width: 260px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        rotate(27deg);
+}
+
+.line-three {
+    width: 260px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        rotate(153deg);
+}
+
+.line-four {
+    width: 260px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        rotate(207deg);
+}
+
+
+/* =========================================================
+   COMPANY NODES
+========================================================= */
+
+.company-node {
+    position: absolute;
+
+    width: 130px;
+    min-height: 105px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    padding: 12px;
+
+    border: 1px solid rgba(21, 155, 114, 0.14);
+
+    border-radius: 19px;
+
+    background:
+        rgba(255, 255, 255, 0.85);
+
+    color: var(--ho-dark);
+
+    box-shadow:
+        0 15px 40px rgba(7, 29, 25, 0.07);
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    backdrop-filter: blur(8px);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.hiring-orbit-dark .company-node {
+    background:
+        rgba(8, 37, 31, 0.85);
+
+    color: var(--ho-mint);
+
+    border-color:
+        rgba(21, 155, 114, 0.18);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.company-node:hover {
+    transform:
+        translateY(-7px) scale(1.04);
+
+    border-color:
+        rgba(21, 155, 114, 0.45);
+
+    box-shadow:
+        0 22px 50px rgba(21, 155, 114, 0.12);
+}
+
+.company-node-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: var(--ho-mint);
+
+    color: var(--ho-green);
+
+    font-size: 16px;
+}
+
+.hiring-orbit-dark .company-node-icon {
+    background:
+        rgba(21, 155, 114, 0.13);
+}
+
+.company-node-name {
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.2px;
+}
+
+.company-node small {
+    font-size: 8px;
+
+    color: var(--ho-green);
+
+    font-weight: 650;
+}
+
+
+/* =========================================================
+   NODE POSITIONS
+========================================================= */
+
+.node-one {
+    top: 28px;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+}
+
+.node-two {
+    top: 105px;
+    right: 105px;
+}
+
+.node-three {
+    right: 15px;
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+}
+
+.node-four {
+    right: 105px;
+    bottom: 105px;
+}
+
+.node-five {
+    bottom: 28px;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+}
+
+.node-six {
+    left: 105px;
+    bottom: 105px;
+}
+
+.node-seven {
+    left: 15px;
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+}
+
+.node-eight {
+    top: 105px;
+    left: 105px;
+}
+
+
+/* preserve transforms on hover */
+
+.node-one:hover,
+.node-five:hover {
+    transform:
+        translateX(-50%) translateY(-7px) scale(1.04);
+}
+
+.node-three:hover,
+.node-seven:hover {
+    transform:
+        translateY(-50%) translateX(0) scale(1.04);
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.orbit-stats {
+    width: min(600px, 100%);
+
+    margin: 15px auto 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 35px;
+}
+
+.orbit-stat {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+.orbit-stat strong {
+    font-size: 22px;
+
+    letter-spacing: -0.8px;
+
+    color: var(--ho-green);
+}
+
+.orbit-stat span {
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    opacity: 0.45;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 30px;
+
+    background: currentColor;
+
+    opacity: 0.12;
+}
+
+
+/* =========================================================
+   MOBILE COMPANY LIST
+========================================================= */
+
+.mobile-company-list {
+    display: none;
+}
+
+
+/* =========================================================
+   MODAL OVERLAY
+========================================================= */
+
+.company-modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    z-index: 999999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(7, 29, 25, 0.5);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    animation:
+        companyOverlayIn 0.2s ease;
+}
+
+@keyframes companyOverlayIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.company-modal {
+    position: relative;
+
+    width: min(470px, 100%);
+
+    max-height: 450px;
+
+    overflow-y: auto;
+
+    padding: 27px;
+
+    border-radius: 24px;
+
+    background: #ffffff;
+
+    color: var(--ho-dark);
+
+    border: 1px solid rgba(21, 155, 114, 0.15);
+
+    box-shadow:
+        0 35px 100px rgba(0, 0, 0, 0.28);
+
+    animation:
+        companyModalIn 0.28s cubic-bezier(0.2,
+            0.8,
+            0.2,
+            1);
+}
+
+@keyframes companyModalIn {
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(18px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================================
+   CLOSE
+========================================================= */
+
+.company-modal-close {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(7, 29, 25, 0.1);
+
+    background: #f4f8f6;
+
+    color: var(--ho-dark);
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.company-modal-close:hover {
+    background: var(--ho-green);
+
+    color: white;
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.company-modal-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding-right: 40px;
+
+    margin-bottom: 14px;
+}
+
+.modal-company-logo {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: var(--ho-mint);
+
+    color: var(--ho-green);
+
+    font-size: 20px;
+}
+
+.company-modal-header span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--ho-green);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.company-modal-header h3 {
+    margin: 0;
+
+    font-size: 24px;
+
+    letter-spacing: -0.8px;
+}
+
+
+/* =========================================================
+   META
+========================================================= */
+
+.company-modal-meta {
+    display: flex;
+
+    gap: 7px;
+
+    margin-bottom: 14px;
+}
+
+.company-modal-meta span {
+    padding: 5px 8px;
+
+    border-radius: 7px;
+
+    background: #f2f7f5;
+
+    font-size: 8px;
+
+    opacity: 0.65;
+}
+
+.company-modal-description {
+    margin: 0 0 17px;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+
+    opacity: 0.58;
+}
+
+
+/* =========================================================
+   OPENINGS
+========================================================= */
+
+.company-openings-title {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 9px;
+}
+
+.company-openings-title strong {
+    font-size: 10px;
+}
+
+.company-openings-title span {
+    color: var(--ho-green);
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   ROLE LIST
+========================================================= */
+
+.company-role-list {
+    padding: 11px 13px;
+
+    border-radius: 13px;
+
+    background: #f6faf8;
+
+    margin-bottom: 15px;
+}
+
+.company-role {
+    margin-bottom: 9px;
+}
+
+.company-role:last-child {
+    margin-bottom: 0;
+}
+
+.role-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 4px;
+}
+
+.role-top span {
+    font-size: 8px;
+}
+
+.role-top strong {
+    color: var(--ho-green);
+
+    font-size: 8px;
+}
+
+.role-bar {
+    width: 100%;
+    height: 4px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background:
+        rgba(21, 155, 114, 0.1);
+}
+
+.role-bar span {
+    display: block;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: var(--ho-green);
+}
+
+
+/* =========================================================
+   MODAL BUTTON
+========================================================= */
+
+.company-modal-btn {
+    width: 100%;
+
+    min-height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border: 0;
+
+    border-radius: 11px;
+
+    background: var(--ho-green);
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.company-modal-btn:hover {
+    background: var(--ho-dark);
+
+    transform:
+        translateY(-2px);
+}
+
+.company-modal-btn svg {
+    transition: 0.2s ease;
+}
+
+.company-modal-btn:hover svg {
+    transform:
+        translate(2px, -2px);
+}
+
+
+/* =========================================================
+   DARK MODAL
+========================================================= */
+
+.company-modal-dark {
+    background: #0a2721;
+
+    color: var(--ho-mint);
+
+    border-color:
+        rgba(21, 155, 114, 0.25);
+
+    box-shadow:
+        0 35px 100px rgba(0, 0, 0, 0.55);
+}
+
+.company-modal-dark .company-modal-close {
+    background:
+        rgba(239, 255, 249, 0.07);
+
+    color: var(--ho-mint);
+
+    border-color:
+        rgba(239, 255, 249, 0.1);
+}
+
+.company-modal-dark .company-modal-close:hover {
+    background: var(--ho-green);
+
+    color: white;
+}
+
+.company-modal-dark .modal-company-logo {
+    background:
+        rgba(21, 155, 114, 0.13);
+}
+
+.company-modal-dark .company-modal-meta span {
+    background:
+        rgba(239, 255, 249, 0.06);
+
+    color: var(--ho-mint);
+}
+
+.company-modal-dark .company-role-list {
+    background:
+        rgba(239, 255, 249, 0.045);
+}
+
+.company-modal-dark .role-bar {
+    background:
+        rgba(21, 155, 114, 0.12);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .hiring-orbit {
+        padding-top: 80px;
+    }
+
+    .hiring-orbit-header {
+        gap: 30px;
+    }
+
+    .orbit-stage {
+        height: 480px;
+
+        transform:
+            scale(0.88);
+
+        transform-origin:
+            center top;
+
+        margin-bottom: -55px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .hiring-orbit {
+        padding:
+            70px 16px 65px;
+
+        background:
+            radial-gradient(circle at 50% 40%,
+                rgba(21, 155, 114, 0.08),
+                transparent 45%),
+            #ffffff;
+    }
+
+    .hiring-orbit-dark {
+        background:
+            radial-gradient(circle at 50% 40%,
+                rgba(21, 155, 114, 0.13),
+                transparent 45%),
+            #071d19;
+    }
+
+
+    /* HEADER */
+
+    .hiring-orbit-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+        margin-bottom: 35px;
+    }
+
+    .orbit-eyebrow {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+    .hiring-orbit-header h2 {
+        font-size: 39px;
+
+        letter-spacing: -1.8px;
+
+        line-height: 1;
+    }
+
+    .orbit-header-right {
+        max-width: 100%;
+    }
+
+    .orbit-header-right p {
+        font-size: 11px;
+
+        line-height: 1.7;
+
+        margin-bottom: 10px;
+    }
+
+    .orbit-all-btn {
+        font-size: 10px;
+    }
+
+
+    /* =================================
+       MOBILE ORBIT
+    ================================= */
+
+    .orbit-stage {
+
+        width: 100%;
+
+        height: 390px;
+
+        margin: 0 auto 0;
+
+        transform: none;
+    }
+
+    /*
+       smaller rings
+    */
+
+    .ring-one {
+        width: 145px;
+        height: 145px;
+    }
+
+    .ring-two {
+        width: 255px;
+        height: 255px;
+    }
+
+    .ring-three {
+        width: 350px;
+        height: 350px;
+    }
+
+
+    /* CENTER */
+
+    .orbit-center {
+        width: 83px;
+        height: 83px;
+    }
+
+    .center-logo {
+        width: 27px;
+        height: 27px;
+
+        border-radius: 8px;
+
+        font-size: 13px;
+    }
+
+    .orbit-center span {
+        font-size: 6.5px;
+
+        letter-spacing: 0.9px;
+    }
+
+    .orbit-center small {
+        font-size: 4.5px;
+    }
+
+
+    /* LINES */
+
+    .orbit-line {
+        opacity: 0.7;
+    }
+
+    .line-one,
+    .line-two,
+    .line-three,
+    .line-four {
+        width: 175px;
+    }
+
+
+    /* NODES */
+
+    .company-node {
+        width: 85px;
+
+        min-height: 70px;
+
+        padding: 8px;
+
+        gap: 3px;
+
+        border-radius: 13px;
+
+        box-shadow:
+            0 10px 25px rgba(7, 29, 25, 0.06);
+    }
+
+    .company-node-icon {
+        width: 25px;
+        height: 25px;
+
+        border-radius: 7px;
+
+        font-size: 13px;
+    }
+
+    .company-node-name {
+        font-size: 11px;
+    }
+
+    .company-node small {
+        font-size: 9px;
+    }
+
+    /* MOBILE POSITIONS */
+
+    .node-one {
+        top: 8px;
+    }
+
+    .node-two {
+        top: 55px;
+        right: 22px;
+    }
+
+    .node-three {
+        right: 0;
+        top: 50%;
+    }
+
+    .node-four {
+        right: 22px;
+        bottom: 55px;
+    }
+
+    .node-five {
+        bottom: 8px;
+    }
+
+    .node-six {
+        left: 22px;
+        bottom: 55px;
+    }
+
+    .node-seven {
+        left: 0;
+        top: 50%;
+    }
+
+    .node-eight {
+        top: 55px;
+        left: 22px;
+    }
+
+
+    /* STATS */
+
+    .orbit-stats {
+        gap: 18px;
+
+        margin-top: 15px;
+    }
+
+    .orbit-stat strong {
+        font-size: 17px;
+    }
+
+    .orbit-stat span {
+        font-size: 7px;
+
+        letter-spacing: 0.7px;
+    }
+
+    .stat-divider {
+        height: 25px;
+    }
+
+
+    /* =================================
+       MOBILE MODAL
+    ================================= */
+
+    .company-modal-overlay {
+        padding: 14px;
+    }
+
+    @media (max-width: 650px) {
+
+        .company-node-name {
+            font-size: 11px !important;
+        }
+
+        .company-node small {
+            font-size: 9px !important;
+        }
+    }
+
+    @media (max-width: 380px) {
+
+        .company-node-name {
+            font-size: 11px !important;
+        }
+
+        .company-node small {
+            font-size: 9px !important;
+        }
+    }
+
+    .company-modal {
+        width: 100%;
+
+        max-width: 390px;
+
+        max-height: 430px;
+
+        padding:
+            21px 17px 17px;
+
+        border-radius: 20px;
+    }
+
+    .company-modal-close {
+        top: 11px;
+        right: 11px;
+
+        width: 29px;
+        height: 29px;
+    }
+
+    .company-modal-header {
+        gap: 10px;
+
+        padding-right: 35px;
+
+        margin-bottom: 11px;
+    }
+
+    .modal-company-logo {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 11px;
+
+        font-size: 16px;
+    }
+
+    .company-modal-header h3 {
+        font-size: 21px;
+    }
+
+    .company-modal-header span {
+        font-size: 7px;
+    }
+
+    .company-modal-meta {
+        margin-bottom: 10px;
+    }
+
+    .company-modal-meta span {
+        padding: 4px 6px;
+
+        font-size: 7px;
+    }
+
+    .company-modal-description {
+        font-size: 9px;
+
+        line-height: 1.5;
+
+        margin-bottom: 12px;
+    }
+
+    .company-role-list {
+        padding:
+            9px 10px;
+
+        margin-bottom: 11px;
+    }
+
+    .company-role {
+        margin-bottom: 7px;
+    }
+
+    .company-modal-btn {
+        min-height: 35px;
+
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .hiring-orbit-header h2 {
+        font-size: 34px;
+    }
+
+    .orbit-stage {
+        height: 355px;
+    }
+
+    .ring-one {
+        width: 130px;
+        height: 130px;
+    }
+
+    .ring-two {
+        width: 225px;
+        height: 225px;
+    }
+
+    .ring-three {
+        width: 315px;
+        height: 315px;
+    }
+
+    .company-node {
+        width: 77px;
+
+        min-height: 64px;
+    }
+
+    .company-node-name {
+        font-size: 8px;
+    }
+
+    .company-node small {
+        font-size: 5.5px;
+    }
+
+    .node-two,
+    .node-eight {
+        top: 50px;
+    }
+
+    .node-four,
+    .node-six {
+        bottom: 50px;
+    }
+
+    .orbit-stats {
+        gap: 13px;
+    }
+
+    .orbit-stat strong {
+        font-size: 15px;
+    }
+
+    .orbit-stat span {
+        font-size: 6px;
+    }
+}

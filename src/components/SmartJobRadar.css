@@ -1,0 +1,2278 @@
+/* =========================================================
+   HIRENEST — SMART JOB RADAR
+========================================================= */
+
+.smart-radar {
+    --sr-green: #159b72;
+    --sr-dark: #071d19;
+    --sr-mint: #effff9;
+
+    width: 100%;
+
+    padding:
+        100px 20px 95px;
+
+    background:
+        radial-gradient(circle at 75% 35%,
+            rgba(21,
+                155,
+                114,
+                0.08),
+            transparent 30%),
+        #f8fbfa;
+
+    color: #071d19;
+
+    overflow: hidden;
+}
+
+.smart-radar-dark {
+    background:
+        radial-gradient(circle at 75% 35%,
+            rgba(21,
+                155,
+                114,
+                0.13),
+            transparent 32%),
+        #071d19;
+
+    color: #effff9;
+}
+
+.smart-radar-container {
+    width: 100%;
+
+    max-width: 1160px;
+
+    margin: auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.radar-header {
+    display: grid;
+
+    grid-template-columns:
+        1fr 350px;
+
+    align-items: end;
+
+    gap: 60px;
+
+    margin-bottom: 48px;
+}
+
+.radar-eyebrow {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: #159b72;
+
+    font-size: 12px;
+
+    font-weight: 850;
+
+    letter-spacing: 2.5px;
+}
+
+.radar-header h2 {
+    margin: 0;
+
+    font-size:
+        clamp(40px,
+            5vw,
+            62px);
+
+    line-height: 0.97;
+
+    letter-spacing: -2.8px;
+
+    font-weight: 800;
+}
+
+.radar-header h2 span {
+    color: #159b72;
+}
+
+.radar-header-right p {
+    margin: 0 0 13px;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    opacity: 0.53;
+}
+
+.how-radar-works {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #159b72;
+
+    font-size: 12px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.radar-empty {
+    display: grid;
+
+    grid-template-columns:
+        300px 1fr;
+
+    align-items: center;
+
+    gap: 65px;
+
+    min-height: 380px;
+
+    padding:
+        45px;
+
+    border:
+        1px solid rgba(21,
+            155,
+            114,
+            0.13);
+
+    border-radius: 27px;
+
+    background:
+        #effff9;
+}
+
+.smart-radar-dark .radar-empty {
+    background:
+        rgba(21,
+            155,
+            114,
+            0.05);
+
+    border-color:
+        rgba(21,
+            155,
+            114,
+            0.16);
+}
+
+.empty-visual {
+    position: relative;
+
+    width: 250px;
+    height: 250px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+}
+
+.empty-radar-ring {
+    position: absolute;
+
+    border:
+        1px solid rgba(21,
+            155,
+            114,
+            0.2);
+
+    border-radius: 50%;
+}
+
+.ring-a {
+    width: 130px;
+    height: 130px;
+}
+
+.ring-b {
+    width: 220px;
+    height: 220px;
+
+    border-style: dashed;
+}
+
+.empty-radar-center {
+    position: relative;
+
+    z-index: 2;
+
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        #159b72;
+
+    color: white;
+
+    font-size: 27px;
+
+    box-shadow:
+        0 0 0 15px rgba(21,
+            155,
+            114,
+            0.08);
+}
+
+.empty-copy>span {
+    color: #159b72;
+
+    font-size: 11px;
+
+    font-weight: 850;
+
+    letter-spacing: 1.5px;
+}
+
+.empty-copy h3 {
+    margin:
+        7px 0 10px;
+
+    font-size: 27px;
+
+    letter-spacing: -0.8px;
+}
+
+.empty-copy p {
+    max-width: 440px;
+
+    margin: 0 0 17px;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    opacity: 0.55;
+}
+
+.empty-copy button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    min-height: 37px;
+
+    padding:
+        7px 12px;
+
+    border: 0;
+
+    border-radius: 9px;
+
+    background:
+        #159b72;
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   RADAR CONNECTED
+========================================================= */
+
+.radar-connected {
+    display: grid;
+
+    grid-template-columns:
+        1fr auto;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding:
+        14px 18px;
+
+    margin-bottom: 13px;
+
+    border:
+        1px solid rgba(21,
+            155,
+            114,
+            0.13);
+
+    border-radius: 16px;
+
+    background:
+        rgba(239,
+            255,
+            249,
+            0.65);
+}
+
+.smart-radar-dark .radar-connected {
+    background:
+        rgba(21,
+            155,
+            114,
+            0.055);
+
+    border-color:
+        rgba(21,
+            155,
+            114,
+            0.16);
+}
+
+.connected-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+.radar-signal {
+    position: relative;
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.signal-core {
+    position: relative;
+
+    z-index: 2;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        #159b72;
+
+    color:
+        white;
+
+    font-size: 12px;
+}
+
+.signal-wave {
+    position: absolute;
+
+    border:
+        1px solid rgba(21,
+            155,
+            114,
+            0.4);
+
+    border-radius: 50%;
+}
+
+.wave-one {
+    width: 34px;
+    height: 34px;
+}
+
+.wave-two {
+    width: 44px;
+    height: 44px;
+
+    opacity: 0.5;
+}
+
+.connected-left>div:last-child>span {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #159b72;
+
+    font-size: 11px;
+
+    font-weight: 850;
+
+    letter-spacing: 1.2px;
+}
+
+.connected-left strong {
+    display: block;
+
+    font-size: 12px;
+}
+
+.connected-left small {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 11px;
+
+    opacity: 0.4;
+}
+
+.profile-mini-preview {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.mini-profile-field {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+.mini-profile-field>svg {
+    color: #159b72;
+
+    font-size: 12px;
+}
+
+.mini-profile-field small {
+    display: block;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+
+    opacity: 0.4;
+}
+
+.mini-profile-field strong {
+    display: block;
+
+    max-width: 105px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    font-size: 11px;
+}
+
+.profile-mini-preview>button {
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #159b72;
+
+    font-size: 11px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   MATCH SUMMARY
+========================================================= */
+
+.radar-summary {
+    display: grid;
+
+    grid-template-columns:
+        90px 1fr 1.4fr;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding:
+        19px 21px;
+
+    margin-bottom: 25px;
+
+    border-radius: 18px;
+
+    background:
+        #071d19;
+
+    color: #effff9;
+}
+
+.summary-score {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.score-circle {
+    width: 95px;
+    height: 95px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid rgba(21,
+            155,
+            114,
+            0.45);
+
+    border-radius: 50%;
+
+    background:
+        rgba(21,
+            155,
+            114,
+            0.09);
+}
+
+.score-circle strong {
+    color: #159b72;
+
+    font-size: 23px;
+
+    letter-spacing: -1px;
+}
+
+.score-circle small {
+    font-size: 11px;
+
+    letter-spacing: 1.1px;
+
+    opacity: 0.55;
+}
+
+.summary-copy>span {
+    color: #57c99e;
+
+    font-size: 11px;
+
+    font-weight: 850;
+
+    letter-spacing: 1.3px;
+}
+
+.summary-copy h3 {
+    margin:
+        5px 0 5px;
+
+    font-size: 15px;
+
+    letter-spacing: -0.3px;
+}
+
+.summary-copy p {
+    max-width: 410px;
+
+    margin: 0;
+
+    font-size: 12px;
+
+    line-height: 1.55;
+
+    opacity: 0.45;
+}
+
+.summary-signals {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 7px;
+}
+
+.signal-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding:
+        8px;
+
+    border:
+        1px solid rgba(239,
+            255,
+            249,
+            0.08);
+
+    border-radius: 9px;
+}
+
+.signal-item-icon {
+    width: 26px;
+    height: 26px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background:
+        rgba(239,
+            255,
+            249,
+            0.05);
+
+    color:
+        #159b72;
+
+    font-size: 13px;
+}
+
+.signal-item small {
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 0.8px;
+
+    opacity: 0.4;
+}
+
+.signal-item strong {
+    display: block;
+
+    max-width: 115px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    font-size: 11px;
+}
+
+.signal-item.active .signal-item-icon {
+    background:
+        rgba(21,
+            155,
+            114,
+            0.12);
+}
+
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.radar-toolbar {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 11px;
+
+    padding:
+        0 3px;
+}
+
+.radar-toolbar>div:first-child {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.radar-toolbar>div:first-child span {
+    font-size: 11px;
+
+    font-weight: 850;
+
+    letter-spacing: 1px;
+
+    color: #159b72;
+}
+
+.radar-toolbar>div:first-child strong {
+    font-size: 12px;
+}
+
+.radar-filter {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+.radar-filter>span {
+    font-size: 11px;
+
+    opacity: 0.4;
+}
+
+.radar-filter select {
+    appearance: none;
+
+    padding:
+        7px 25px 7px 8px;
+
+    border:
+        1px solid rgba(21,
+            155,
+            114,
+            0.13);
+
+    border-radius: 8px;
+
+    background:
+        transparent;
+
+    color:
+        inherit;
+
+    outline: none;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+.radar-filter>svg {
+    margin-left: -21px;
+
+    pointer-events: none;
+
+    color: #159b72;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   JOB SIGNAL
+========================================================= */
+
+.radar-jobs {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.radar-job {
+    display: grid;
+
+    grid-template-columns:
+        67px 1.3fr 1fr auto;
+
+    align-items: center;
+
+    gap: 15px;
+
+    min-height: 94px;
+
+    padding:
+        10px 13px;
+
+    border:
+        1px solid rgba(21,
+            155,
+            114,
+            0.1);
+
+    border-radius: 14px;
+
+    background:
+        rgba(255,
+            255,
+            255,
+            0.75);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.smart-radar-dark .radar-job {
+    background:
+        rgba(255,
+            255,
+            255,
+            0.028);
+
+    border-color:
+        rgba(239,
+            255,
+            249,
+            0.07);
+}
+
+.radar-job:hover {
+    transform:
+        translateY(-2px);
+
+    border-color:
+        rgba(21,
+            155,
+            114,
+            0.25);
+
+    box-shadow:
+        0 13px 32px rgba(21,
+            155,
+            114,
+            0.07);
+}
+
+
+/* MATCH */
+
+.job-match {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+.match-orbit {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: baseline;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border:
+        2px solid rgba(21,
+            155,
+            114,
+            0.2);
+
+    border-top-color:
+        #159b72;
+
+    color:
+        #159b72;
+}
+
+.match-orbit strong {
+    font-size: 14px;
+}
+
+.match-orbit small {
+    font-size: 11px;
+}
+
+.job-match>span {
+    font-size: 11px;
+
+    font-weight: 850;
+
+    letter-spacing: 1px;
+
+    opacity: 0.4;
+}
+
+
+/* JOB MAIN */
+
+.job-company-line {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+.job-company {
+    color:
+        #159b72;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+.new-job-dot {
+    padding:
+        2px 4px;
+
+    border-radius: 4px;
+
+    background:
+        rgba(21,
+            155,
+            114,
+            0.08);
+
+    color:
+        #159b72;
+
+    font-size: 11px;
+
+    font-weight: 850;
+}
+
+.job-main h3 {
+    margin:
+        4px 0 9px;
+
+    font-size: 10px;
+    color:
+        #95a4a0;
+
+    letter-spacing: -0.3px;
+}
+
+.job-meta {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.job-meta span {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 3px;
+
+    font-size: 11px;
+
+    opacity: 0.48;
+}
+
+.job-meta svg {
+    color: #159b72;
+
+    font-size: 12px;
+}
+
+
+/* WHY */
+
+.job-reasons>span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 11px;
+
+    font-weight: 850;
+
+    letter-spacing: 1px;
+
+    opacity: 0.4;
+}
+
+.job-reasons>div {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 4px;
+}
+
+.job-reasons small {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 3px;
+
+    padding:
+        4px 6px;
+
+    border-radius: 5px;
+
+    background:
+        #effff9;
+
+    color:
+        #159b72;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.smart-radar-dark .job-reasons small {
+    background:
+        rgba(21,
+            155,
+            114,
+            0.09);
+}
+
+
+/* ACTIONS */
+
+.job-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+.save-job {
+    width: 31px;
+    height: 31px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid rgba(21,
+            155,
+            114,
+            0.15);
+
+    border-radius: 8px;
+
+    background:
+        transparent;
+
+    color:
+        #159b72;
+
+    cursor: pointer;
+}
+
+.save-job.saved {
+    background:
+        #159b72;
+
+    color:
+        white;
+}
+
+.view-job {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    min-height: 31px;
+
+    padding:
+        6px 9px;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    background:
+        #159b72;
+
+    color:
+        white;
+
+    font-size: 11px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   MODAL OVERLAY
+========================================================= */
+
+.radar-modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    z-index: 999999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+
+    background:
+        rgba(7,
+            29,
+            25,
+            0.53);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    animation:
+        radarOverlayIn 0.2s ease;
+}
+
+@keyframes radarOverlayIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.radar-modal,
+.how-match-modal {
+    position: relative;
+
+    width:
+        min(450px,
+            100%);
+
+    max-height:
+        calc(100dvh - 30px);
+
+    overflow-y: auto;
+
+    padding:
+        24px;
+
+    border-radius: 21px;
+
+    background:
+        white;
+
+    color:
+        #071d19;
+
+    border:
+        1px solid rgba(21,
+            155,
+            114,
+            0.15);
+
+    box-shadow:
+        0 35px 100px rgba(0,
+            0,
+            0,
+            0.31);
+
+    animation:
+        radarModalIn 0.27s cubic-bezier(0.2,
+            0.8,
+            0.2,
+            1);
+}
+
+@keyframes radarModalIn {
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(17px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0) scale(1);
+    }
+}
+
+.radar-modal-close {
+    position: absolute;
+
+    top: 13px;
+    right: 13px;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid rgba(7,
+            29,
+            25,
+            0.08);
+
+    border-radius: 50%;
+
+    background:
+        #f4f8f6;
+
+    color:
+        #071d19;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.radar-modal-close:hover {
+    background:
+        #159b72;
+
+    color:
+        white;
+
+    transform:
+        rotate(90deg);
+}
+
+
+/* =========================================================
+   JOB MODAL
+========================================================= */
+
+.modal-match-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding-right: 35px;
+
+    margin-bottom: 13px;
+}
+
+.modal-score {
+    flex-shrink: 0;
+
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        #effff9;
+
+    color:
+        #159b72;
+}
+
+.modal-score strong {
+    font-size: 17px;
+
+    line-height: 1;
+}
+
+.modal-score span {
+    margin-top: 3px;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    font-weight: 850;
+}
+
+.modal-match-header>div:last-child>span {
+    color:
+        #159b72;
+
+    font-size: 11px;
+
+    font-weight: 850;
+
+    letter-spacing: 1.3px;
+}
+
+.modal-match-header h3 {
+    margin:
+        4px 0 2px;
+
+    font-size: 20px;
+
+    letter-spacing: -0.6px;
+}
+
+.modal-match-header small {
+    font-size: 12px;
+
+    opacity: 0.43;
+}
+
+.modal-job-meta {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 5px;
+
+    margin-bottom: 13px;
+}
+
+.modal-job-meta span {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    padding:
+        5px 7px;
+
+    border-radius: 6px;
+
+    background:
+        #f5f8f7;
+
+    font-size: 11px;
+
+    opacity: 0.7;
+}
+
+.modal-job-meta svg {
+    color:
+        #159b72;
+
+    font-size: 12px;
+}
+
+.modal-job-description {
+    margin: 0 0 15px;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    opacity: 0.55;
+}
+
+
+/* EXPLANATION */
+
+.match-explanation {
+    padding:
+        12px;
+
+    border-radius: 12px;
+
+    background:
+        #f6faf8;
+
+    margin-bottom: 12px;
+}
+
+.explanation-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+.explanation-title span {
+    font-size: 11px;
+
+    font-weight: 850;
+
+    letter-spacing: 1px;
+}
+
+.explanation-title svg {
+    color:
+        #159b72;
+
+    font-size: 12px;
+}
+
+.match-reason {
+    margin-bottom: 8px;
+}
+
+.match-reason:last-child {
+    margin-bottom: 0;
+}
+
+.match-reason>div:first-child {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 4px;
+}
+
+.match-reason>div:first-child span {
+    font-size: 11px;
+}
+
+.match-reason>div:first-child strong {
+    color:
+        #159b72;
+
+    font-size: 11px;
+}
+
+.reason-bar {
+    width: 100%;
+
+    height: 4px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background:
+        rgba(21,
+            155,
+            114,
+            0.1);
+}
+
+.reason-bar span {
+    display: block;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        #159b72;
+}
+
+
+/* READY */
+
+.modal-ready {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding:
+        9px 10px;
+
+    border-radius: 9px;
+
+    background:
+        rgba(21,
+            155,
+            114,
+            0.07);
+
+    color:
+        #159b72;
+}
+
+.modal-ready>svg {
+    font-size: 13px;
+
+    flex-shrink: 0;
+}
+
+.modal-ready strong {
+    display: block;
+
+    margin-bottom: 2px;
+
+    font-size: 11px;
+}
+
+.modal-ready span {
+    display: block;
+
+    font-size: 11px;
+
+    opacity: 0.65;
+}
+
+
+/* ACTIONS */
+
+.modal-job-actions {
+    display: grid;
+
+    grid-template-columns:
+        110px 1fr;
+
+    gap: 7px;
+
+    margin-top: 13px;
+}
+
+.modal-save,
+.modal-apply {
+    min-height: 35px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+}
+
+.modal-save {
+    border:
+        1px solid rgba(21,
+            155,
+            114,
+            0.17);
+
+    background:
+        transparent;
+
+    color:
+        #159b72;
+}
+
+.modal-apply {
+    border:
+        1px solid #159b72;
+
+    background:
+        #159b72;
+
+    color:
+        white;
+}
+
+
+/* =========================================================
+   HOW MATCH MODAL
+========================================================= */
+
+.how-match-modal {
+    width:
+        min(470px,
+            100%);
+}
+
+.how-match-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.how-match-icon {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        #effff9;
+
+    color:
+        #159b72;
+
+    font-size: 18px;
+}
+
+.how-match-top span {
+    display: block;
+
+    color:
+        #159b72;
+
+    font-size: 11px;
+
+    font-weight: 850;
+
+    letter-spacing: 1.2px;
+}
+
+.how-match-top h3 {
+    margin:
+        4px 0 0;
+
+    font-size: 21px;
+
+    letter-spacing: -0.6px;
+}
+
+.how-steps {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.how-step {
+    display: grid;
+
+    grid-template-columns:
+        30px 1fr;
+
+    gap: 9px;
+
+    padding:
+        10px;
+
+    border-radius: 10px;
+
+    background:
+        #f6faf8;
+}
+
+.how-step>strong {
+    color:
+        #159b72;
+
+    font-size: 12px;
+}
+
+.how-step b {
+    display: block;
+
+    font-size: 12px;
+
+    margin-bottom: 3px;
+}
+
+.how-step p {
+    margin: 0;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    opacity: 0.5;
+}
+
+.how-close-btn {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    min-height: 35px;
+
+    margin-top: 13px;
+
+    border:
+        1px solid #159b72;
+
+    border-radius: 9px;
+
+    background:
+        #159b72;
+
+    color:
+        white;
+
+    font-size: 12px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   DARK MODALS
+========================================================= */
+
+.radar-modal-dark {
+    background:
+        #0a2721;
+
+    color:
+        #effff9;
+
+    border-color:
+        rgba(21,
+            155,
+            114,
+            0.23);
+}
+
+.radar-modal-dark .radar-modal-close {
+    background:
+        rgba(239,
+            255,
+            249,
+            0.06);
+
+    color:
+        #effff9;
+
+    border-color:
+        rgba(239,
+            255,
+            249,
+            0.1);
+}
+
+.radar-modal-dark .radar-modal-close:hover {
+    background:
+        #159b72;
+
+    color:
+        white;
+}
+
+.radar-modal-dark .modal-score,
+.radar-modal-dark .how-match-icon {
+    background:
+        rgba(21,
+            155,
+            114,
+            0.11);
+}
+
+.radar-modal-dark .modal-job-meta span,
+.radar-modal-dark .match-explanation,
+.radar-modal-dark .how-step {
+    background:
+        rgba(239,
+            255,
+            249,
+            0.045);
+}
+
+.radar-modal-dark .modal-ready {
+    background:
+        rgba(21,
+            155,
+            114,
+            0.09);
+}
+
+.radar-modal-dark .modal-save {
+    color:
+        #159b72;
+
+    border-color:
+        rgba(21,
+            155,
+            114,
+            0.25);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .smart-radar {
+        padding:
+            80px 20px 75px;
+    }
+
+    .radar-header {
+        grid-template-columns:
+            1fr 300px;
+
+        gap: 30px;
+    }
+
+    .radar-empty {
+        grid-template-columns:
+            220px 1fr;
+
+        gap: 40px;
+
+        padding:
+            30px;
+    }
+
+    .empty-visual {
+        width: 200px;
+        height: 200px;
+    }
+
+    .radar-job {
+        grid-template-columns:
+            58px 1.25fr 1fr auto;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .smart-radar {
+        padding:
+            70px 15px 60px;
+
+        background:
+            radial-gradient(circle at 50% 25%,
+                rgba(21,
+                    155,
+                    114,
+                    0.08),
+                transparent 42%),
+            #f8fbfa;
+    }
+
+    .smart-radar-dark {
+        background:
+            radial-gradient(circle at 50% 25%,
+                rgba(21,
+                    155,
+                    114,
+                    0.13),
+                transparent 45%),
+            #071d19;
+    }
+
+
+    /* HEADER */
+
+    .radar-header {
+        display: block;
+
+        margin-bottom: 30px;
+    }
+
+    .radar-header h2 {
+        font-size: 38px;
+
+        letter-spacing:
+            -1.7px;
+    }
+
+    .radar-header-right {
+        margin-top: 15px;
+    }
+
+    .radar-header-right p {
+        font-size: 12px;
+    }
+
+    .how-radar-works {
+        font-size: 11px;
+    }
+
+
+    /* EMPTY */
+
+    .radar-empty {
+        display: block;
+
+        min-height: 0;
+
+        padding:
+            25px 16px;
+
+        text-align: center;
+
+        border-radius: 19px;
+    }
+
+    .empty-visual {
+        width: 170px;
+        height: 170px;
+
+        margin:
+            0 auto 15px;
+    }
+
+    .ring-a {
+        width: 95px;
+        height: 95px;
+    }
+
+    .ring-b {
+        width: 155px;
+        height: 155px;
+    }
+
+    .empty-radar-center {
+        width: 55px;
+        height: 55px;
+
+        font-size: 21px;
+    }
+
+    .empty-copy h3 {
+        font-size: 22px;
+    }
+
+    .empty-copy p {
+        font-size: 12px;
+
+        line-height: 1.6;
+    }
+
+    .empty-copy button {
+        width: 100%;
+
+        justify-content: center;
+
+        min-height: 35px;
+    }
+
+
+    /* CONNECTED */
+
+    .radar-connected {
+        grid-template-columns:
+            1fr;
+
+        gap: 11px;
+
+        padding:
+            12px;
+
+        border-radius: 14px;
+    }
+
+    .connected-left small {
+        font-size: 11px;
+    }
+
+    .profile-mini-preview {
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 8px;
+    }
+
+    .profile-mini-preview>button {
+        grid-column:
+            1 / -1;
+
+        justify-content: center;
+
+        min-height: 29px;
+
+        border:
+            1px solid rgba(21,
+                155,
+                114,
+                0.16);
+
+        border-radius: 8px;
+    }
+
+
+    /* SUMMARY */
+
+    .radar-summary {
+        grid-template-columns:
+            75px 1fr;
+
+        gap: 13px;
+
+        padding:
+            15px;
+
+        border-radius: 15px;
+    }
+
+    .score-circle {
+        width: 66px;
+        height: 66px;
+    }
+
+    .score-circle strong {
+        font-size: 20px;
+    }
+
+    .summary-copy h3 {
+        font-size: 12px;
+    }
+
+    .summary-copy p {
+        font-size: 11px;
+    }
+
+    .summary-signals {
+        grid-column:
+            1 / -1;
+
+        gap: 5px;
+    }
+
+    .signal-item {
+        padding: 7px;
+    }
+
+    .signal-item-icon {
+        width: 23px;
+        height: 23px;
+
+        font-size: 12px;
+    }
+
+    .signal-item strong {
+        max-width:
+            100px;
+
+        font-size: 11px;
+    }
+
+
+    /* TOOLBAR */
+
+    .radar-toolbar {
+        margin-top: 18px;
+    }
+
+    .radar-filter>span {
+        display: none;
+    }
+
+
+    /* JOBS */
+
+    .radar-job {
+        display: grid;
+
+        grid-template-columns:
+            54px 1fr 34px;
+
+        gap: 9px;
+
+        min-height: 0;
+
+        padding:
+            11px;
+
+        border-radius: 13px;
+    }
+
+    .match-orbit {
+        width: 44px;
+        height: 44px;
+    }
+
+    .job-main h3 {
+        font-size: 11px;
+    }
+
+    .job-meta {
+        gap: 5px;
+    }
+
+    .job-meta span {
+        font-size: 11px;
+    }
+
+    .job-reasons {
+        grid-column:
+            2 / -1;
+
+        margin-top: -1px;
+    }
+
+    .job-actions {
+        grid-column:
+            3;
+
+        grid-row:
+            1;
+
+        flex-direction: column;
+    }
+
+    .save-job {
+        width: 29px;
+        height: 29px;
+    }
+
+    .view-job {
+        width: 29px;
+        height: 29px;
+
+        padding: 0;
+
+        justify-content: center;
+
+        font-size: 0;
+    }
+
+    .view-job svg {
+        font-size: 13px;
+    }
+
+
+    /* MODALS */
+
+    .radar-modal-overlay {
+        padding: 12px;
+    }
+
+    .radar-modal,
+    .how-match-modal {
+        width: 100%;
+
+        max-width: 390px;
+
+        max-height:
+            calc(100dvh - 24px);
+
+        padding:
+            20px 15px 15px;
+
+        border-radius: 18px;
+    }
+
+    .modal-match-header h3 {
+        font-size: 18px;
+    }
+
+    .modal-job-description {
+        font-size: 12px;
+    }
+
+    .modal-job-actions {
+        grid-template-columns:
+            95px 1fr;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .radar-header h2 {
+        font-size: 33px;
+    }
+
+    .radar-summary {
+        grid-template-columns:
+            66px 1fr;
+    }
+
+    .score-circle {
+        width: 70px;
+        height: 70px;
+        
+    }
+    .score-circle small
+    {
+        font-size: 8px;
+    }
+
+    .summary-copy h3 {
+        font-size: 12px;
+    }
+
+    .summary-copy p {
+        font-size: 11px;
+    }
+
+    .job-main h3 {
+        font-size: 10px;
+    }
+
+    .job-meta span {
+        font-size: 9px;
+    }
+
+    .job-reasons small {
+        font-size: 10px;
+
+        padding:
+            3px 5px;
+    }
+}
