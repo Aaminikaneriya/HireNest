@@ -94,6 +94,140 @@ const secondaryNavigation = [
    NAVBAR
 ========================================================= */
 
+
+/* =========================================================
+   MOBILE HEADER CONTROL TRANSFORMATION
+   Keeps desktop/tablet unchanged.
+========================================================= */
+const mobileHeaderFixStyles = `
+@media (max-width: 650px) {
+  .hirenest-navbar .nav-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 7px !important;
+    min-width: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .hirenest-navbar .theme-button {
+    width: 42px !important;
+    min-width: 42px !important;
+    max-width: 42px !important;
+    height: 32px !important;
+    min-height: 32px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    flex: 0 0 42px !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    border-radius: 999px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .hirenest-navbar .theme-circle {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    max-width: 24px !important;
+    min-height: 24px !important;
+    max-height: 24px !important;
+    flex: 0 0 24px !important;
+    margin: 0 !important;
+    position: absolute !important;
+    left: 4px !important;
+    top: 4px !important;
+    transform: translateX(0) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .hirenest-navbar .theme-circle.dark {
+    transform: translateX(10px) !important;
+  }
+
+  .hirenest-navbar .theme-circle svg {
+    width: 14px !important;
+    height: 14px !important;
+    flex: 0 0 14px !important;
+  }
+
+  .hirenest-navbar .search-button,
+  .hirenest-navbar .mobile-menu-button {
+    width: 34px !important;
+    min-width: 34px !important;
+    max-width: 34px !important;
+    height: 34px !important;
+    min-height: 34px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    flex: 0 0 34px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .hirenest-navbar .search-button svg,
+  .hirenest-navbar .mobile-menu-button svg {
+    width: 17px !important;
+    height: 17px !important;
+    flex: 0 0 17px !important;
+  }
+
+  .hirenest-navbar .nav-inner {
+    min-width: 0 !important;
+  }
+
+  .hirenest-navbar .nav-inner > * {
+    min-width: 0 !important;
+  }
+
+  .hirenest-navbar .logo {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  .hirenest-navbar .logo span,
+  .hirenest-navbar .logo small {
+    max-width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .hirenest-navbar .nav-actions {
+    gap: 5px !important;
+  }
+
+  .hirenest-navbar .theme-button {
+    width: 40px !important;
+    min-width: 40px !important;
+    max-width: 40px !important;
+    flex-basis: 40px !important;
+  }
+
+  .hirenest-navbar .theme-circle.dark {
+    transform: translateX(8px) !important;
+  }
+
+  .hirenest-navbar .search-button,
+  .hirenest-navbar .mobile-menu-button {
+    width: 32px !important;
+    min-width: 32px !important;
+    max-width: 32px !important;
+    flex-basis: 32px !important;
+  }
+}
+`;
+
 function Navbar() {
 
     const navigate = useNavigate();
@@ -479,6 +613,7 @@ function Navbar() {
 
     return (
         <>
+            <style>{mobileHeaderFixStyles}</style>
 
             {/* =================================================
                 TOP ANNOUNCEMENT BAR

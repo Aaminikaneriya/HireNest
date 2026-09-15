@@ -1509,3 +1509,193 @@
         font-size: 6px;
     }
 }
+/* =========================================================
+   HIRENEST — PREMIUM DARK MODE MODAL TRANSFORMATION
+   ========================================================= */
+
+.hiring-orbit-dark .company-modal-dark,
+.company-modal-dark {
+    background:
+        linear-gradient(145deg, rgba(13, 48, 40, 0.99), rgba(5, 29, 24, 0.99));
+    color: #ecfff8;
+    border: 1px solid rgba(62, 218, 166, 0.32);
+    box-shadow:
+        0 35px 100px rgba(0, 0, 0, 0.72),
+        0 0 0 1px rgba(21, 155, 114, 0.05),
+        0 20px 70px rgba(21, 155, 114, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.hiring-orbit-dark .company-modal-overlay,
+.company-modal-overlay:has(.company-modal-dark) {
+    background:
+        radial-gradient(circle at center, rgba(21, 155, 114, 0.08), rgba(0, 0, 0, 0.76) 68%);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+}
+
+.company-modal-dark .company-modal-close {
+    background: rgba(236, 255, 248, 0.08);
+    color: #dffff2;
+    border: 1px solid rgba(236, 255, 248, 0.14);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.22);
+}
+
+.company-modal-dark .company-modal-close:hover {
+    background: #159b72;
+    color: #ffffff;
+    border-color: #159b72;
+    transform: rotate(90deg) scale(1.05);
+}
+
+.company-modal-dark .modal-company-logo {
+    background: linear-gradient(145deg, rgba(21, 155, 114, 0.24), rgba(21, 155, 114, 0.08));
+    color: #5ee7bd;
+    border: 1px solid rgba(94, 231, 189, 0.18);
+    box-shadow: inset 0 0 20px rgba(21, 155, 114, 0.08);
+}
+
+.company-modal-dark .company-modal-header span {
+    color: #55e1b5;
+    opacity: 1;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+    text-shadow: 0 0 16px rgba(85, 225, 181, 0.15);
+}
+
+.company-modal-dark .company-modal-header h3 {
+    color: #f1fff9;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.company-modal-dark .company-modal-meta span {
+    background: rgba(236, 255, 248, 0.07);
+    color: #bcefe0;
+    border: 1px solid rgba(236, 255, 248, 0.08);
+    opacity: 1;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+.company-modal-dark .company-modal-description {
+    color: #b9d9ce;
+    opacity: 1;
+    line-height: 1.7;
+}
+
+.company-modal-dark .company-openings-title strong {
+    color: #eafff7;
+    font-weight: 750;
+}
+
+.company-modal-dark .company-openings-title span {
+    color: #52e0b4;
+    font-weight: 850;
+    text-shadow: 0 0 15px rgba(82, 224, 180, 0.12);
+}
+
+.company-modal-dark .company-role-list {
+    background: linear-gradient(145deg, rgba(236, 255, 248, 0.055), rgba(236, 255, 248, 0.025));
+    border: 1px solid rgba(236, 255, 248, 0.07);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+.company-modal-dark .role-top span {
+    color: #c9e8dd;
+    opacity: 1;
+    font-weight: 600;
+}
+
+.company-modal-dark .role-top strong {
+    color: #55e1b5;
+    font-weight: 800;
+}
+
+.company-modal-dark .role-bar {
+    background: rgba(236, 255, 248, 0.08);
+    border: 1px solid rgba(236, 255, 248, 0.035);
+}
+
+.company-modal-dark .role-bar span {
+    background: linear-gradient(90deg, #159b72, #48dcae);
+    box-shadow: 0 0 10px rgba(72, 220, 174, 0.22);
+}
+
+.company-modal-dark .company-modal-btn {
+    background: linear-gradient(135deg, #159b72, #20b887);
+    color: #ffffff;
+    border: 1px solid rgba(94, 231, 189, 0.16);
+    box-shadow: 0 10px 28px rgba(21, 155, 114, 0.18);
+    font-weight: 800;
+}
+
+.company-modal-dark .company-modal-btn:hover {
+    background: linear-gradient(135deg, #1caf82, #2acb99);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 35px rgba(21, 155, 114, 0.28);
+}
+
+.company-modal-dark::-webkit-scrollbar {
+    width: 5px;
+}
+
+.company-modal-dark::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.company-modal-dark::-webkit-scrollbar-thumb {
+    background: rgba(72, 220, 174, 0.28);
+    border-radius: 20px;
+}
+
+.company-modal-dark::-webkit-scrollbar-thumb:hover {
+    background: rgba(72, 220, 174, 0.48);
+}
+
+@media (max-width: 650px) {
+    .company-modal-dark {
+        background: linear-gradient(145deg, rgba(10, 42, 35, 0.995), rgba(4, 26, 22, 0.995));
+        border-radius: 20px;
+        border-color: rgba(62, 218, 166, 0.28);
+        box-shadow:
+            0 28px 80px rgba(0, 0, 0, 0.78),
+            0 0 35px rgba(21, 155, 114, 0.06);
+    }
+
+    .company-modal-dark .company-modal-header h3 {
+        color: #f2fff9;
+    }
+
+    .company-modal-dark .company-modal-description {
+        color: #b8d8ce;
+    }
+
+    .company-modal-dark .company-role-list {
+        background: rgba(236, 255, 248, 0.045);
+    }
+
+    .company-modal-dark .role-top span {
+        color: #c5e4da;
+    }
+
+    .company-modal-dark .company-modal-btn {
+        min-height: 40px;
+    }
+}
+
+@media (max-width: 380px) {
+    .company-modal-dark {
+        padding: 21px 17px 17px;
+    }
+
+    .company-modal-dark .company-modal-header h3 {
+        font-size: 20px;
+    }
+
+    .company-modal-dark .company-modal-description {
+        font-size: 9px;
+        line-height: 1.6;
+    }
+}
