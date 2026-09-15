@@ -2246,10 +2246,10 @@
     .score-circle {
         width: 70px;
         height: 70px;
-        
+
     }
-    .score-circle small
-    {
+
+    .score-circle small {
         font-size: 8px;
     }
 
@@ -2274,5 +2274,1458 @@
 
         padding:
             3px 5px;
+    }
+}
+
+/* =========================================================
+   HIRENEST — SMART JOB RADAR
+   PREMIUM MOBILE RESPONSIVE TRANSFORMATION
+   Add this block at the VERY END of SmartJobRadar.css
+========================================================= */
+
+.smart-radar,
+.smart-radar * {
+    box-sizing: border-box;
+}
+
+.smart-radar {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.smart-radar-container {
+    width: 100%;
+    max-width: 1160px;
+}
+
+
+/* =========================================================
+   MOBILE — 650px
+========================================================= */
+
+@media (max-width: 650px) {
+
+    /* -----------------------------------------------------
+       SECTION
+    ----------------------------------------------------- */
+
+    .smart-radar {
+        width: 100%;
+        padding: 62px 14px 55px;
+        overflow: hidden;
+    }
+
+    .smart-radar-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* -----------------------------------------------------
+       HEADER
+    ----------------------------------------------------- */
+
+    .radar-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 17px;
+        margin-bottom: 27px;
+    }
+
+    .radar-eyebrow {
+        margin-bottom: 9px;
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .radar-header h2 {
+        width: 100%;
+        margin: 0;
+        font-size: clamp(31px, 9vw, 40px);
+        line-height: 0.98;
+        letter-spacing: -1.7px;
+    }
+
+    .radar-header-right {
+        width: 100%;
+        margin: 0;
+    }
+
+    .radar-header-right p {
+        max-width: 100%;
+        margin: 0 0 11px;
+        font-size: 12px;
+        line-height: 1.65;
+        opacity: 0.58;
+    }
+
+    .how-radar-works {
+        min-height: 34px;
+        padding: 7px 0;
+        font-size: 11px;
+        gap: 5px;
+    }
+
+
+    /* -----------------------------------------------------
+       EMPTY STATE
+    ----------------------------------------------------- */
+
+    .radar-empty {
+        width: 100%;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        padding: 25px 17px 21px;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .empty-visual {
+        width: 155px;
+        height: 155px;
+        margin: 0 auto 9px;
+    }
+
+    .ring-a {
+        width: 88px;
+        height: 88px;
+    }
+
+    .ring-b {
+        width: 142px;
+        height: 142px;
+    }
+
+    .empty-radar-center {
+        width: 53px;
+        height: 53px;
+        font-size: 20px;
+        box-shadow:
+            0 0 0 11px rgba(21, 155, 114, 0.08);
+    }
+
+    .empty-copy {
+        width: 100%;
+    }
+
+    .empty-copy>span {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+    .empty-copy h3 {
+        margin: 6px 0 8px;
+        font-size: 21px;
+        line-height: 1.1;
+        letter-spacing: -0.7px;
+    }
+
+    .empty-copy p {
+        width: 100%;
+        max-width: 330px;
+        margin: 0 auto 15px;
+        font-size: 11.5px;
+        line-height: 1.65;
+    }
+
+    .empty-copy button {
+        width: 100%;
+        max-width: 250px;
+        min-height: 40px;
+        justify-content: center;
+        padding: 8px 13px;
+        border-radius: 9px;
+        font-size: 11px;
+    }
+
+
+    /* -----------------------------------------------------
+       CONNECTED PROFILE
+    ----------------------------------------------------- */
+
+    .radar-connected {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 13px;
+        padding: 13px;
+        margin-bottom: 11px;
+        border-radius: 15px;
+    }
+
+    .connected-left {
+        width: 100%;
+        gap: 9px;
+    }
+
+    .radar-signal {
+        flex: 0 0 36px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .signal-core {
+        width: 28px;
+        height: 28px;
+        font-size: 11px;
+    }
+
+    .wave-one {
+        width: 32px;
+        height: 32px;
+    }
+
+    .wave-two {
+        width: 41px;
+        height: 41px;
+    }
+
+    .connected-left>div:last-child {
+        min-width: 0;
+    }
+
+    .connected-left>div:last-child>span {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .connected-left strong {
+        font-size: 11px;
+    }
+
+    .connected-left small {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+    .profile-mini-preview {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .mini-profile-field {
+        min-width: 0;
+        gap: 5px;
+        padding: 7px 8px;
+        border-radius: 8px;
+        background: rgba(21, 155, 114, 0.04);
+    }
+
+    .mini-profile-field>svg {
+        flex: 0 0 auto;
+        font-size: 11px;
+    }
+
+    .mini-profile-field>div {
+        min-width: 0;
+    }
+
+    .mini-profile-field small {
+        font-size: 8px;
+        letter-spacing: 0.6px;
+    }
+
+    .mini-profile-field strong {
+        max-width: 100%;
+        font-size: 10px;
+    }
+
+    .profile-mini-preview>button {
+        grid-column: 1 / -1;
+        width: 100%;
+        min-height: 35px;
+        justify-content: center;
+        border:
+            1px solid rgba(21, 155, 114, 0.16);
+        border-radius: 8px;
+        font-size: 10px;
+    }
+
+
+    /* -----------------------------------------------------
+       MATCH SUMMARY
+    ----------------------------------------------------- */
+
+    .radar-summary {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 70px minmax(0, 1fr);
+        gap: 13px;
+        padding: 14px;
+        margin-bottom: 20px;
+        border-radius: 16px;
+    }
+
+    .summary-score {
+        width: 70px;
+    }
+
+    .score-circle {
+        width: 68px;
+        height: 68px;
+    }
+
+    .score-circle strong {
+        font-size: 19px;
+    }
+
+    .score-circle small {
+        font-size: 8px;
+        letter-spacing: 0.7px;
+    }
+
+    .summary-copy {
+        min-width: 0;
+    }
+
+    .summary-copy>span {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .summary-copy h3 {
+        margin: 4px 0 5px;
+        font-size: 13px;
+        line-height: 1.25;
+        letter-spacing: -0.25px;
+    }
+
+    .summary-copy p {
+        width: 100%;
+        max-width: 100%;
+        font-size: 10.5px;
+        line-height: 1.55;
+    }
+
+    .summary-signals {
+        grid-column: 1 / -1;
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+    }
+
+    .signal-item {
+        min-width: 0;
+        padding: 7px;
+        gap: 6px;
+        border-radius: 8px;
+    }
+
+    .signal-item-icon {
+        flex: 0 0 24px;
+        width: 24px;
+        height: 24px;
+        border-radius: 6px;
+        font-size: 11px;
+    }
+
+    .signal-item>div:last-child {
+        min-width: 0;
+    }
+
+    .signal-item small {
+        font-size: 8px;
+        letter-spacing: 0.5px;
+    }
+
+    .signal-item strong {
+        max-width: 100%;
+        font-size: 9.5px;
+    }
+
+
+    /* -----------------------------------------------------
+       TOOLBAR
+    ----------------------------------------------------- */
+
+    .radar-toolbar {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
+        padding: 0 1px;
+    }
+
+    .radar-toolbar>div:first-child {
+        min-width: 0;
+    }
+
+    .radar-toolbar>div:first-child span {
+        font-size: 9px;
+        letter-spacing: 0.8px;
+    }
+
+    .radar-toolbar>div:first-child strong {
+        font-size: 11px;
+    }
+
+    .radar-filter {
+        flex: 0 0 auto;
+    }
+
+    .radar-filter>span {
+        display: none;
+    }
+
+    .radar-filter select {
+        min-height: 31px;
+        padding: 6px 24px 6px 8px;
+        border-radius: 7px;
+        font-size: 9px;
+    }
+
+
+    /* -----------------------------------------------------
+       JOB LIST
+    ----------------------------------------------------- */
+
+    .radar-jobs {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .radar-job {
+        width: 100%;
+        min-width: 0;
+        min-height: auto;
+
+        display: grid;
+        grid-template-columns: 51px minmax(0, 1fr) 34px;
+        grid-template-rows: auto auto;
+
+        align-items: start;
+
+        gap: 7px 9px;
+
+        padding: 11px;
+
+        border-radius: 13px;
+    }
+
+
+    /* MATCH */
+
+    .job-match {
+        width: 51px;
+        align-items: center;
+        gap: 3px;
+    }
+
+    .match-orbit {
+        width: 44px;
+        height: 44px;
+        border-width: 2px;
+    }
+
+    .match-orbit strong {
+        font-size: 12px;
+    }
+
+    .match-orbit small {
+        font-size: 8px;
+    }
+
+    .job-match>span {
+        font-size: 8px;
+        letter-spacing: 0.8px;
+    }
+
+
+    /* JOB MAIN */
+
+    .job-main {
+        min-width: 0;
+    }
+
+    .job-company-line {
+        min-width: 0;
+        gap: 5px;
+    }
+
+    .job-company {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 9px;
+        letter-spacing: 0.4px;
+    }
+
+    .new-job-dot {
+        flex: 0 0 auto;
+        padding: 2px 4px;
+        font-size: 7px;
+    }
+
+    .job-main h3 {
+        width: 100%;
+        margin: 4px 0 7px;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        font-size: 12px;
+        line-height: 1.3;
+        letter-spacing: -0.2px;
+    }
+
+    .job-meta {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .job-meta span {
+        font-size: 9px;
+        line-height: 1.3;
+        gap: 3px;
+    }
+
+    .job-meta svg {
+        flex: 0 0 auto;
+        font-size: 10px;
+    }
+
+
+    /* -----------------------------------------------------
+       WHY MATCH
+    ----------------------------------------------------- */
+
+    .job-reasons {
+        grid-column: 2 / -1;
+        min-width: 0;
+        margin-top: 0;
+    }
+
+    .job-reasons>span {
+        margin-bottom: 5px;
+        font-size: 8px;
+        letter-spacing: 0.8px;
+    }
+
+    .job-reasons>div {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .job-reasons small {
+        max-width: 100%;
+        padding: 4px 6px;
+        border-radius: 5px;
+        font-size: 8px;
+        line-height: 1.25;
+    }
+
+
+    /* -----------------------------------------------------
+       ACTIONS
+    ----------------------------------------------------- */
+
+    .job-actions {
+        width: 34px;
+        grid-column: 3;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .save-job,
+    .view-job {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        min-height: 30px;
+        padding: 0;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .save-job svg,
+    .view-job svg {
+        width: 13px;
+        height: 13px;
+    }
+
+    .view-job {
+        font-size: 0;
+    }
+
+
+    /* -----------------------------------------------------
+       MODAL OVERLAY
+    ----------------------------------------------------- */
+
+    .radar-modal-overlay {
+        width: 100vw;
+        height: 100dvh;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 10px;
+
+        overflow: hidden;
+
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+
+    .radar-modal,
+    .how-match-modal {
+        width: 100%;
+        max-width: 390px;
+        max-height: calc(100dvh - 20px);
+
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        padding: 19px 14px 14px;
+
+        border-radius: 17px;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .radar-modal-close {
+        top: 10px;
+        right: 10px;
+
+        width: 28px;
+        height: 28px;
+    }
+
+
+    /* -----------------------------------------------------
+       JOB MODAL
+    ----------------------------------------------------- */
+
+    .modal-match-header {
+        gap: 9px;
+        padding-right: 34px;
+        margin-bottom: 11px;
+    }
+
+    .modal-score {
+        width: 50px;
+        height: 50px;
+    }
+
+    .modal-score strong {
+        font-size: 15px;
+    }
+
+    .modal-score span {
+        font-size: 8px;
+        letter-spacing: 0.8px;
+    }
+
+    .modal-match-header>div:last-child {
+        min-width: 0;
+    }
+
+    .modal-match-header>div:last-child>span {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .modal-match-header h3 {
+        max-width: 100%;
+        margin: 3px 0 2px;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        font-size: 17px;
+        letter-spacing: -0.4px;
+    }
+
+    .modal-match-header small {
+        font-size: 10px;
+    }
+
+    .modal-job-meta {
+        gap: 4px;
+        margin-bottom: 11px;
+    }
+
+    .modal-job-meta span {
+        padding: 5px 6px;
+        font-size: 9px;
+    }
+
+    .modal-job-meta svg {
+        font-size: 10px;
+    }
+
+    .modal-job-description {
+        margin-bottom: 13px;
+        font-size: 10.5px;
+        line-height: 1.6;
+    }
+
+
+    /* -----------------------------------------------------
+       MATCH EXPLANATION
+    ----------------------------------------------------- */
+
+    .match-explanation {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+
+    .explanation-title {
+        margin-bottom: 8px;
+    }
+
+    .explanation-title span {
+        font-size: 9px;
+        letter-spacing: 0.8px;
+    }
+
+    .match-reason {
+        margin-bottom: 7px;
+    }
+
+    .match-reason>div:first-child {
+        margin-bottom: 3px;
+    }
+
+    .match-reason>div:first-child span,
+    .match-reason>div:first-child strong {
+        font-size: 9px;
+    }
+
+    .reason-bar {
+        height: 4px;
+    }
+
+
+    /* -----------------------------------------------------
+       READY
+    ----------------------------------------------------- */
+
+    .modal-ready {
+        gap: 7px;
+        padding: 8px 9px;
+        border-radius: 8px;
+    }
+
+    .modal-ready>svg {
+        font-size: 11px;
+    }
+
+    .modal-ready strong {
+        font-size: 9px;
+    }
+
+    .modal-ready span {
+        font-size: 9px;
+        line-height: 1.4;
+    }
+
+
+    /* -----------------------------------------------------
+       MODAL ACTIONS
+    ----------------------------------------------------- */
+
+    .modal-job-actions {
+        grid-template-columns: 85px minmax(0, 1fr);
+        gap: 6px;
+        margin-top: 11px;
+    }
+
+    .modal-save,
+    .modal-apply {
+        min-height: 37px;
+        border-radius: 8px;
+        font-size: 10px;
+    }
+
+
+    /* -----------------------------------------------------
+       HOW MATCH MODAL
+    ----------------------------------------------------- */
+
+    .how-match-modal {
+        padding: 18px 14px 14px;
+    }
+
+    .how-match-top {
+        gap: 9px;
+        margin-bottom: 14px;
+    }
+
+    .how-match-icon {
+        width: 39px;
+        height: 39px;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+
+    .how-match-top>div:last-child {
+        min-width: 0;
+    }
+
+    .how-match-top span {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .how-match-top h3 {
+        margin-top: 3px;
+        font-size: 18px;
+    }
+
+    .how-steps {
+        gap: 6px;
+    }
+
+    .how-step {
+        grid-template-columns: 25px minmax(0, 1fr);
+        gap: 7px;
+        padding: 9px;
+        border-radius: 9px;
+    }
+
+    .how-step>strong {
+        font-size: 10px;
+    }
+
+    .how-step b {
+        margin-bottom: 2px;
+        font-size: 10px;
+    }
+
+    .how-step p {
+        font-size: 9px;
+        line-height: 1.5;
+    }
+
+    .how-close-btn {
+        min-height: 37px;
+        margin-top: 10px;
+        border-radius: 8px;
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES — 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .smart-radar {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .radar-header h2 {
+        font-size: 34px;
+        letter-spacing: -1.5px;
+    }
+
+    .radar-header-right p {
+        font-size: 11px;
+    }
+
+    .radar-empty {
+        padding: 22px 14px 19px;
+    }
+
+    .empty-visual {
+        width: 145px;
+        height: 145px;
+    }
+
+    .ring-a {
+        width: 82px;
+        height: 82px;
+    }
+
+    .ring-b {
+        width: 132px;
+        height: 132px;
+    }
+
+    .empty-radar-center {
+        width: 50px;
+        height: 50px;
+        font-size: 19px;
+    }
+
+    .empty-copy h3 {
+        font-size: 20px;
+    }
+
+    .empty-copy p {
+        font-size: 11px;
+    }
+
+    .radar-summary {
+        grid-template-columns: 64px minmax(0, 1fr);
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .summary-score,
+    .score-circle {
+        width: 62px;
+        height: 62px;
+    }
+
+    .score-circle strong {
+        font-size: 17px;
+    }
+
+    .summary-copy h3 {
+        font-size: 12px;
+    }
+
+    .summary-copy p {
+        font-size: 9.5px;
+    }
+
+    .signal-item {
+        padding: 6px;
+    }
+
+    .signal-item-icon {
+        width: 22px;
+        height: 22px;
+        flex-basis: 22px;
+    }
+
+    .signal-item small {
+        font-size: 7px;
+    }
+
+    .signal-item strong {
+        font-size: 8.5px;
+    }
+
+    .radar-job {
+        grid-template-columns: 47px minmax(0, 1fr) 32px;
+        gap: 7px;
+        padding: 10px;
+    }
+
+    .job-match {
+        width: 47px;
+    }
+
+    .match-orbit {
+        width: 41px;
+        height: 41px;
+    }
+
+    .match-orbit strong {
+        font-size: 11px;
+    }
+
+    .job-company {
+        font-size: 8px;
+    }
+
+    .job-main h3 {
+        font-size: 11px;
+    }
+
+    .job-meta span {
+        font-size: 8px;
+    }
+
+    .job-reasons small {
+        font-size: 7.5px;
+    }
+
+    .save-job,
+    .view-job {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+        min-height: 28px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES — 380px
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .smart-radar {
+        padding:
+            54px 10px 48px;
+    }
+
+    .radar-header {
+        gap: 14px;
+        margin-bottom: 23px;
+    }
+
+    .radar-eyebrow {
+        font-size: 8px;
+        letter-spacing: 1.7px;
+    }
+
+    .radar-header h2 {
+        font-size: 30px;
+        letter-spacing: -1.3px;
+    }
+
+    .radar-header-right p {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+    .how-radar-works {
+        font-size: 10px;
+    }
+
+
+    /* EMPTY */
+
+    .radar-empty {
+        padding: 20px 12px 17px;
+        border-radius: 17px;
+    }
+
+    .empty-visual {
+        width: 130px;
+        height: 130px;
+        margin-bottom: 7px;
+    }
+
+    .ring-a {
+        width: 74px;
+        height: 74px;
+    }
+
+    .ring-b {
+        width: 118px;
+        height: 118px;
+    }
+
+    .empty-radar-center {
+        width: 46px;
+        height: 46px;
+        font-size: 17px;
+        box-shadow:
+            0 0 0 9px rgba(21, 155, 114, 0.08);
+    }
+
+    .empty-copy>span {
+        font-size: 8px;
+    }
+
+    .empty-copy h3 {
+        font-size: 18px;
+    }
+
+    .empty-copy p {
+        max-width: 280px;
+        font-size: 10px;
+    }
+
+    .empty-copy button {
+        max-width: 220px;
+        min-height: 37px;
+        font-size: 10px;
+    }
+
+
+    /* CONNECTED */
+
+    .radar-connected {
+        padding: 10px;
+        gap: 9px;
+    }
+
+    .connected-left strong {
+        font-size: 10px;
+    }
+
+    .connected-left small {
+        font-size: 9px;
+    }
+
+    .profile-mini-preview {
+        gap: 5px;
+    }
+
+    .mini-profile-field {
+        padding: 6px;
+    }
+
+    .mini-profile-field small {
+        font-size: 7px;
+    }
+
+    .mini-profile-field strong {
+        font-size: 8px;
+    }
+
+
+    /* SUMMARY */
+
+    .radar-summary {
+        grid-template-columns: 57px minmax(0, 1fr);
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .summary-score,
+    .score-circle {
+        width: 56px;
+        height: 56px;
+    }
+
+    .score-circle strong {
+        font-size: 15px;
+    }
+
+    .score-circle small {
+        font-size: 7px;
+    }
+
+    .summary-copy>span {
+        font-size: 7px;
+    }
+
+    .summary-copy h3 {
+        font-size: 10px;
+    }
+
+    .summary-copy p {
+        font-size: 8.5px;
+    }
+
+    .summary-signals {
+        gap: 4px;
+    }
+
+    .signal-item {
+        padding: 5px;
+        gap: 4px;
+    }
+
+    .signal-item-icon {
+        width: 20px;
+        height: 20px;
+        flex-basis: 20px;
+        font-size: 9px;
+    }
+
+    .signal-item small {
+        font-size: 6.5px;
+    }
+
+    .signal-item strong {
+        font-size: 7.5px;
+    }
+
+
+    /* TOOLBAR */
+
+    .radar-toolbar>div:first-child span {
+        font-size: 7px;
+    }
+
+    .radar-toolbar>div:first-child strong {
+        font-size: 9px;
+    }
+
+    .radar-filter select {
+        min-height: 28px;
+        font-size: 8px;
+    }
+
+
+    /* JOB */
+
+    .radar-job {
+        grid-template-columns: 43px minmax(0, 1fr) 30px;
+        gap: 6px;
+        padding: 9px;
+        border-radius: 11px;
+    }
+
+    .job-match {
+        width: 43px;
+    }
+
+    .match-orbit {
+        width: 38px;
+        height: 38px;
+    }
+
+    .match-orbit strong {
+        font-size: 10px;
+    }
+
+    .match-orbit small {
+        font-size: 7px;
+    }
+
+    .job-match>span {
+        font-size: 7px;
+    }
+
+    .job-company {
+        font-size: 7px;
+    }
+
+    .job-main h3 {
+        margin: 3px 0 5px;
+        font-size: 10px;
+    }
+
+    .job-meta {
+        gap: 4px;
+    }
+
+    .job-meta span {
+        font-size: 7px;
+    }
+
+    .job-meta svg {
+        font-size: 8px;
+    }
+
+    .job-reasons>span {
+        font-size: 7px;
+    }
+
+    .job-reasons small {
+        padding: 3px 5px;
+        font-size: 7px;
+    }
+
+    .save-job,
+    .view-job {
+        width: 26px;
+        height: 26px;
+        min-width: 26px;
+        min-height: 26px;
+        border-radius: 7px;
+    }
+
+    .save-job svg,
+    .view-job svg {
+        width: 11px;
+        height: 11px;
+    }
+
+
+    /* MODAL */
+
+    .radar-modal-overlay {
+        padding: 7px;
+    }
+
+    .radar-modal,
+    .how-match-modal {
+        max-width: 100%;
+        max-height: calc(100dvh - 14px);
+        padding: 17px 11px 11px;
+        border-radius: 15px;
+    }
+
+    .radar-modal-close {
+        width: 26px;
+        height: 26px;
+        top: 8px;
+        right: 8px;
+    }
+
+    .modal-score {
+        width: 45px;
+        height: 45px;
+    }
+
+    .modal-score strong {
+        font-size: 13px;
+    }
+
+    .modal-score span {
+        font-size: 7px;
+    }
+
+    .modal-match-header h3 {
+        font-size: 15px;
+    }
+
+    .modal-match-header small {
+        font-size: 8px;
+    }
+
+    .modal-job-meta span {
+        font-size: 8px;
+        padding: 4px 5px;
+    }
+
+    .modal-job-description {
+        font-size: 9px;
+    }
+
+    .modal-job-actions {
+        grid-template-columns: 75px minmax(0, 1fr);
+    }
+
+    .modal-save,
+    .modal-apply {
+        min-height: 34px;
+        font-size: 9px;
+    }
+
+    .how-match-top h3 {
+        font-size: 16px;
+    }
+
+    .how-step {
+        grid-template-columns: 22px minmax(0, 1fr);
+        padding: 8px;
+    }
+
+    .how-step b {
+        font-size: 9px;
+    }
+
+    .how-step p {
+        font-size: 8px;
+    }
+}
+
+
+/* =========================================================
+   TOUCH DEVICE POLISH
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .radar-job:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .empty-copy button,
+    .how-radar-works,
+    .profile-mini-preview>button,
+    .save-job,
+    .view-job,
+    .modal-save,
+    .modal-apply,
+    .how-close-btn {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .save-job,
+    .view-job {
+        touch-action: manipulation;
+    }
+}
+
+
+/* =========================================================
+   MOBILE DARK MODE POLISH
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .smart-radar-dark .radar-empty {
+        background:
+            linear-gradient(145deg,
+                rgba(21, 155, 114, 0.075),
+                rgba(7, 29, 25, 0.65));
+
+        border-color:
+            rgba(21, 155, 114, 0.18);
+
+        box-shadow:
+            inset 0 1px 0 rgba(239, 255, 249, 0.025);
+    }
+
+    .smart-radar-dark .radar-connected {
+        background:
+            rgba(21, 155, 114, 0.045);
+    }
+
+    .smart-radar-dark .mini-profile-field {
+        background:
+            rgba(21, 155, 114, 0.045);
+    }
+
+    .smart-radar-dark .radar-job {
+        background:
+            linear-gradient(145deg,
+                rgba(255, 255, 255, 0.035),
+                rgba(255, 255, 255, 0.018));
+
+        border-color:
+            rgba(239, 255, 249, 0.075);
+    }
+
+    .smart-radar-dark .signal-item {
+        background:
+            rgba(255, 255, 255, 0.018);
+    }
+
+    .smart-radar-dark .radar-filter select {
+        background:
+            rgba(255, 255, 255, 0.025);
+
+        border-color:
+            rgba(239, 255, 249, 0.09);
+    }
+}
+
+
+/* =========================================================
+   PREVENT MOBILE TEXT / LAYOUT OVERFLOW
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .smart-radar h1,
+    .smart-radar h2,
+    .smart-radar h3,
+    .smart-radar p,
+    .smart-radar span,
+    .smart-radar strong,
+    .smart-radar small,
+    .smart-radar button {
+        overflow-wrap: anywhere;
+    }
+
+    .smart-radar button {
+        max-width: 100%;
+    }
+
+    .smart-radar svg {
+        flex-shrink: 0;
     }
 }
